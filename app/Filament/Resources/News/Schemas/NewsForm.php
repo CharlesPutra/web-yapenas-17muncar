@@ -25,6 +25,8 @@ class NewsForm
                 FileUpload::make('thumbnail')
                     ->image()
                     ->directory('news')
+                    ->disk('public')
+                    ->visibility('public')
                     ->required(),
                 DateTimePicker::make('published_at')
                     ->required(),

@@ -4,86 +4,86 @@
     <style>
         /* versi vidio */
         /* :root {
-                                                            --main-red: #d62828;
-                                                            --text-light: #fff;
-                                                        }
+                                                                    --main-red: #d62828;
+                                                                    --text-light: #fff;
+                                                                }
 
-                                                        body {
-                                                            margin: 0;
-                                                            padding: 0;
-                                                            background-color: #f8f9fa;
-                                                            overflow-x: hidden;
-                                                        }
+                                                                body {
+                                                                    margin: 0;
+                                                                    padding: 0;
+                                                                    background-color: #f8f9fa;
+                                                                    overflow-x: hidden;
+                                                                }
 
-                                                        Hero Section
-                                                        .hero-section {
-                                                            position: relative;
-                                                            width: 100%;
-                                                            height: 100vh;
-                                                            overflow: hidden;
-                                                            display: flex;
-                                                            align-items: center;
-                                                            justify-content: center;
-                                                            color: var(--text-light);
-                                                        }
+                                                                Hero Section
+                                                                .hero-section {
+                                                                    position: relative;
+                                                                    width: 100%;
+                                                                    height: 100vh;
+                                                                    overflow: hidden;
+                                                                    display: flex;
+                                                                    align-items: center;
+                                                                    justify-content: center;
+                                                                    color: var(--text-light);
+                                                                }
 
-                                                        .hero-section video {
-                                                            position: absolute;
-                                                            top: 0;
-                                                            left: 0;
-                                                            width: 100%;
-                                                            height: 100%;
-                                                            object-fit: cover;
-                                                            z-index: -1;
-                                                            filter: brightness(65%);
-                                                        }
+                                                                .hero-section video {
+                                                                    position: absolute;
+                                                                    top: 0;
+                                                                    left: 0;
+                                                                    width: 100%;
+                                                                    height: 100%;
+                                                                    object-fit: cover;
+                                                                    z-index: -1;
+                                                                    filter: brightness(65%);
+                                                                }
 
-                                                        .hero-content {
-                                                            text-align: center;
-                                                            z-index: 2;
-                                                            max-width: 700px;
-                                                            padding: 20px;
-                                                        }
+                                                                .hero-content {
+                                                                    text-align: center;
+                                                                    z-index: 2;
+                                                                    max-width: 700px;
+                                                                    padding: 20px;
+                                                                }
 
-                                                        .hero-content h1 {
-                                                            font-size: 3rem;
-                                                            font-weight: 700;
-                                                            color: #fff;
-                                                            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
-                                                        }
+                                                                .hero-content h1 {
+                                                                    font-size: 3rem;
+                                                                    font-weight: 700;
+                                                                    color: #fff;
+                                                                    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+                                                                }
 
-                                                        .hero-content p {
-                                                            font-size: 1.2rem;
-                                                            margin-top: 15px;
-                                                            color: #f1f1f1;
-                                                            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
-                                                        }
+                                                                .hero-content p {
+                                                                    font-size: 1.2rem;
+                                                                    margin-top: 15px;
+                                                                    color: #f1f1f1;
+                                                                    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+                                                                }
 
-                                                        .hero-content .btn {
-                                                            margin-top: 25px;
-                                                            background-color: var(--main-red);
-                                                            color: #fff;
-                                                            border-radius: 30px;
-                                                            padding: 10px 25px;
-                                                            font-weight: 600;
-                                                            transition: all 0.3s ease;
-                                                        }
+                                                                .hero-content .btn {
+                                                                    margin-top: 25px;
+                                                                    background-color: var(--main-red);
+                                                                    color: #fff;
+                                                                    border-radius: 30px;
+                                                                    padding: 10px 25px;
+                                                                    font-weight: 600;
+                                                                    transition: all 0.3s ease;
+                                                                }
 
-                                                        .hero-content .btn:hover {
-                                                            background-color: #b71c1c;
-                                                            transform: translateY(-3px);
-                                                        }
+                                                                .hero-content .btn:hover {
+                                                                    background-color: #b71c1c;
+                                                                    transform: translateY(-3px);
+                                                                }
 
-                                                        Responsif
-                                                        @media (max-width: 768px) {
-                                                            .hero-content h1 {
-                                                                font-size: 2.2rem;
-                                                            }
+                                                                Responsif
+                                                                @media (max-width: 768px) {
+                                                                    .hero-content h1 {
+                                                                        font-size: 2.2rem;
+                                                                    }
 
-                                                            .hero-content p {
-                                                                font-size: 1rem;
-                                                            }
-                                                        } */
+                                                                    .hero-content p {
+                                                                        font-size: 1rem;
+                                                                    }
+                                                                } */
         /* versi vidio end */
 
         /* versi yt */
@@ -274,7 +274,7 @@
         <div class="overlay"></div>
 
         <div class="hero-content">
-            <h1>Selamat Datang di Yayasan Pendidikan Yapenas</h1>
+            <h1>Selamat Datang di {{ $datas->nama_yayasan }}</h1>
             <p>Membangun generasi unggul melalui pendidikan berkualitas dan karakter mulia.</p>
             {{-- <a href="#program" class="btn btn-lg">Lihat Program Kami</a> --}}
         </div>
@@ -284,8 +284,8 @@
         <div class="custom-shape-divider-bottom-hero">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.77-17.35-168.26-13.21-250.45,3.84
-                                      C406.34,36.47,327.41,67.17,246.65,84.69c-89,19.12-175.47,19.9-261.64-1.54V120H1200V95.8
-                                      C1132.19,109.07,1058.76,111.13,985.66,92.83Z" fill="#fff"></path>
+                     C406.34,36.47,327.41,67.17,246.65,84.69c-89,19.12-175.47,19.9-261.64-1.54V120H1200V95.8
+                    C1132.19,109.07,1058.76,111.13,985.66,92.83Z" fill="#fff"></path>
             </svg>
         </div>
     </section>
@@ -299,30 +299,28 @@
 
                 <!-- Gambar Kegiatan -->
                 <div class="col-lg-6" data-aos="fade-right">
-                    <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=800&q=80"
-                        alt="Tentang Yayasan" class="img-fluid rounded-4 shadow">
+                    <img src="{{asset('storage/' . $datas->image)}}"
+                        alt="{{$datas->nama_yayasan}}" class="img-fluid rounded-4 shadow">
                 </div>
 
                 <!-- Isi Tentang Kami -->
                 <div class="col-lg-6" data-aos="fade-left">
-                    <h2 class="fw-bold text-danger mb-3">Tentang Yayasan Cerdas Mulia</h2>
-                    <p class="text-secondary">
+                    <h2 class="fw-bold text-danger mb-3">Tentang {{$datas->nama_yayasan}}</h2>
+                    <p class="text-secondary">{{$datas->description}}</p>
+                    {{-- <p class="text-secondary">
                         Yayasan Cerdas Mulia didirikan dengan tujuan untuk menciptakan generasi yang berakhlak mulia,
                         cerdas, dan berdaya saing tinggi.
                         Kami berkomitmen dalam menyediakan pendidikan berkualitas dengan pendekatan yang berorientasi pada
                         karakter, ilmu pengetahuan, dan keterampilan abad 21.
-                    </p>
-                    <p class="text-secondary">
+                    </p> --}}
+                    {{-- <p class="text-secondary">
                         Melalui berbagai program pendidikan dari tingkat dasar hingga menengah, kami berharap dapat menjadi
                         wadah yang membentuk siswa menjadi pribadi yang beriman, berilmu, dan bermanfaat bagi masyarakat.
-                    </p>
+                    </p> --}}
                     <ul class="list-unstyled mt-3">
-                        <li><i class="bi bi-check-circle-fill text-danger me-2"></i> Pendidikan berbasis nilai moral dan
-                            karakter</li>
-                        <li><i class="bi bi-check-circle-fill text-danger me-2"></i> Guru berpengalaman dan berdedikasi
-                            tinggi</li>
-                        <li><i class="bi bi-check-circle-fill text-danger me-2"></i> Lingkungan belajar yang aman dan nyaman
-                        </li>
+                        @foreach ($misilist as $m)
+                        <li><i class="bi bi-check-circle-fill text-danger me-2"></i>{{trim($m)}}</li>
+                        @endforeach
                     </ul>
 
                     {{-- <a href="#program" class="btn btn-danger mt-4 px-4 py-2 rounded-pill">

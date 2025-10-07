@@ -24,6 +24,8 @@ class ContactResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'alamat';
 
+    protected static string|\UnitEnum|null $navigationGroup = 'YAYASAN';
+
     public static function form(Schema $schema): Schema
     {
         return ContactForm::configure($schema);

@@ -18,6 +18,8 @@ class ProfileForm
                 FileUpload::make('image')
                     ->image()
                     ->directory('profile')
+                    ->disk('public')
+                    ->visibility('public')
                     ->required(),
                 TextInput::make('motto')
                     ->required(),

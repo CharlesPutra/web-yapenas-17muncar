@@ -19,6 +19,8 @@ class StructureOrganizationForm
                 FileUpload::make('image')
                     ->image()
                     ->directory('structure')
+                    ->disk('public')
+                    ->visibility('public')
                     ->required(),
                 TextInput::make('contact')
                     ->required(),

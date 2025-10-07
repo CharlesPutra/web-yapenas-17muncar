@@ -179,7 +179,7 @@
                             <li><a class="dropdown-item" href="#">SMK</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="#">Berita</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{route('berita')}}">Berita</a></li>
                 </ul>
 
                 <!-- Garis pembatas -->
