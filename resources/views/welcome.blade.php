@@ -4,86 +4,86 @@
     <style>
         /* versi vidio */
         /* :root {
-                        --main-red: #d62828;
-                        --text-light: #fff;
-                    }
+                                                            --main-red: #d62828;
+                                                            --text-light: #fff;
+                                                        }
 
-                    body {
-                        margin: 0;
-                        padding: 0;
-                        background-color: #f8f9fa;
-                        overflow-x: hidden;
-                    }
+                                                        body {
+                                                            margin: 0;
+                                                            padding: 0;
+                                                            background-color: #f8f9fa;
+                                                            overflow-x: hidden;
+                                                        }
 
-                    Hero Section
-                    .hero-section {
-                        position: relative;
-                        width: 100%;
-                        height: 100vh;
-                        overflow: hidden;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        color: var(--text-light);
-                    }
+                                                        Hero Section
+                                                        .hero-section {
+                                                            position: relative;
+                                                            width: 100%;
+                                                            height: 100vh;
+                                                            overflow: hidden;
+                                                            display: flex;
+                                                            align-items: center;
+                                                            justify-content: center;
+                                                            color: var(--text-light);
+                                                        }
 
-                    .hero-section video {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                        z-index: -1;
-                        filter: brightness(65%);
-                    }
+                                                        .hero-section video {
+                                                            position: absolute;
+                                                            top: 0;
+                                                            left: 0;
+                                                            width: 100%;
+                                                            height: 100%;
+                                                            object-fit: cover;
+                                                            z-index: -1;
+                                                            filter: brightness(65%);
+                                                        }
 
-                    .hero-content {
-                        text-align: center;
-                        z-index: 2;
-                        max-width: 700px;
-                        padding: 20px;
-                    }
+                                                        .hero-content {
+                                                            text-align: center;
+                                                            z-index: 2;
+                                                            max-width: 700px;
+                                                            padding: 20px;
+                                                        }
 
-                    .hero-content h1 {
-                        font-size: 3rem;
-                        font-weight: 700;
-                        color: #fff;
-                        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
-                    }
+                                                        .hero-content h1 {
+                                                            font-size: 3rem;
+                                                            font-weight: 700;
+                                                            color: #fff;
+                                                            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+                                                        }
 
-                    .hero-content p {
-                        font-size: 1.2rem;
-                        margin-top: 15px;
-                        color: #f1f1f1;
-                        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
-                    }
+                                                        .hero-content p {
+                                                            font-size: 1.2rem;
+                                                            margin-top: 15px;
+                                                            color: #f1f1f1;
+                                                            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+                                                        }
 
-                    .hero-content .btn {
-                        margin-top: 25px;
-                        background-color: var(--main-red);
-                        color: #fff;
-                        border-radius: 30px;
-                        padding: 10px 25px;
-                        font-weight: 600;
-                        transition: all 0.3s ease;
-                    }
+                                                        .hero-content .btn {
+                                                            margin-top: 25px;
+                                                            background-color: var(--main-red);
+                                                            color: #fff;
+                                                            border-radius: 30px;
+                                                            padding: 10px 25px;
+                                                            font-weight: 600;
+                                                            transition: all 0.3s ease;
+                                                        }
 
-                    .hero-content .btn:hover {
-                        background-color: #b71c1c;
-                        transform: translateY(-3px);
-                    }
+                                                        .hero-content .btn:hover {
+                                                            background-color: #b71c1c;
+                                                            transform: translateY(-3px);
+                                                        }
 
-                    Responsif
-                    @media (max-width: 768px) {
-                        .hero-content h1 {
-                            font-size: 2.2rem;
-                        }
+                                                        Responsif
+                                                        @media (max-width: 768px) {
+                                                            .hero-content h1 {
+                                                                font-size: 2.2rem;
+                                                            }
 
-                        .hero-content p {
-                            font-size: 1rem;
-                        }
-                    } */
+                                                            .hero-content p {
+                                                                font-size: 1rem;
+                                                            }
+                                                        } */
         /* versi vidio end */
 
         /* versi yt */
@@ -182,6 +182,57 @@
         }
 
         /* versi yt end */
+
+
+        /* Wave divider style */
+        .custom-shape-divider-bottom-hero {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+
+        .custom-shape-divider-bottom-hero svg {
+            position: relative;
+            display: block;
+            width: calc(136% + 1.3px);
+            height: 100px;
+        }
+
+        .custom-shape-divider-bottom-hero path {
+            fill: #ffffff;
+        }
+
+
+        .card-program {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card-program:hover {
+            transform: translateY(-8px);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-program img {
+            height: 180px;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .card-program img {
+                height: 150px;
+            }
+        }
+
+        .about-divider svg {
+            display: block;
+            width: 100%;
+            height: auto;
+            line-height: 0;
+            margin-bottom: -1px;
+        }
     </style>
 
     <!-- HERO SECTION versi vidio -->
@@ -197,6 +248,16 @@
             <p>Membentuk generasi berkarakter, cerdas, dan berakhlak mulia melalui pendidikan yang bermakna.</p>
             <a href="#program" class="btn btn-lg">Jelajahi Program Kami</a>
         </div>
+
+          <!-- Pembatas Wave -->
+  <div class="custom-shape-divider-bottom-hero">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.77-17.35-168.26-13.21-250.45,3.84
+      C406.34,36.47,327.41,67.17,246.65,84.69c-89,19.12-175.47,19.9-261.64-1.54V120H1200V95.8
+      C1132.19,109.07,1058.76,111.13,985.66,92.83Z"
+      fill="#fff"></path>
+    </svg>
+  </div>
     </section> --}}
     {{-- versi vidio end --}}
 
@@ -205,7 +266,7 @@
         <!-- Video Background -->
         <div class="video-bg">
             <iframe
-               src="https://www.youtube.com/embed/6m2SnHJdPZQ?autoplay=1&mute=1&loop=1&playlist=6m2SnHJdPZQ&controls=0&showinfo=0&modestbranding=1"
+                src="https://www.youtube.com/embed/6m2SnHJdPZQ?autoplay=1&mute=1&loop=1&playlist=6m2SnHJdPZQ&controls=0&showinfo=0&modestbranding=1"
                 frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
             </iframe>
         </div>
@@ -217,7 +278,231 @@
             <p>Membangun generasi unggul melalui pendidikan berkualitas dan karakter mulia.</p>
             {{-- <a href="#program" class="btn btn-lg">Lihat Program Kami</a> --}}
         </div>
+
+
+        <!-- Pembatas Wave -->
+        <div class="custom-shape-divider-bottom-hero">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.77-17.35-168.26-13.21-250.45,3.84
+                                      C406.34,36.47,327.41,67.17,246.65,84.69c-89,19.12-175.47,19.9-261.64-1.54V120H1200V95.8
+                                      C1132.19,109.07,1058.76,111.13,985.66,92.83Z" fill="#fff"></path>
+            </svg>
+        </div>
     </section>
 
     {{-- versi yt end --}}
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="py-5" style="background-color: #fff;">
+        <div class="container">
+            <div class="row align-items-center g-5">
+
+                <!-- Gambar Kegiatan -->
+                <div class="col-lg-6" data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=800&q=80"
+                        alt="Tentang Yayasan" class="img-fluid rounded-4 shadow">
+                </div>
+
+                <!-- Isi Tentang Kami -->
+                <div class="col-lg-6" data-aos="fade-left">
+                    <h2 class="fw-bold text-danger mb-3">Tentang Yayasan Cerdas Mulia</h2>
+                    <p class="text-secondary">
+                        Yayasan Cerdas Mulia didirikan dengan tujuan untuk menciptakan generasi yang berakhlak mulia,
+                        cerdas, dan berdaya saing tinggi.
+                        Kami berkomitmen dalam menyediakan pendidikan berkualitas dengan pendekatan yang berorientasi pada
+                        karakter, ilmu pengetahuan, dan keterampilan abad 21.
+                    </p>
+                    <p class="text-secondary">
+                        Melalui berbagai program pendidikan dari tingkat dasar hingga menengah, kami berharap dapat menjadi
+                        wadah yang membentuk siswa menjadi pribadi yang beriman, berilmu, dan bermanfaat bagi masyarakat.
+                    </p>
+                    <ul class="list-unstyled mt-3">
+                        <li><i class="bi bi-check-circle-fill text-danger me-2"></i> Pendidikan berbasis nilai moral dan
+                            karakter</li>
+                        <li><i class="bi bi-check-circle-fill text-danger me-2"></i> Guru berpengalaman dan berdedikasi
+                            tinggi</li>
+                        <li><i class="bi bi-check-circle-fill text-danger me-2"></i> Lingkungan belajar yang aman dan nyaman
+                        </li>
+                    </ul>
+
+                    {{-- <a href="#program" class="btn btn-danger mt-4 px-4 py-2 rounded-pill">
+                        Lihat Program Kami
+                    </a> --}}
+                </div>
+
+            </div>
+        </div>
+    </section>
+    {{-- end section about --}}
+
+    <!-- Pembatas di bawah About Section -->
+    <div class="about-divider">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120">
+            <path fill="#ffffff" fill-opacity="1"
+                d="M0,64L48,69.3C96,75,192,85,288,90.7C384,96,480,96,576,101.3C672,107,768,117,864,106.7C960,96,1056,64,1152,53.3C1248,43,1344,53,1392,58.7L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+            </path>
+        </svg>
+    </div>
+
+
+    <!-- ======= Program / Unit Pendidikan Section ======= -->
+    <section id="program" class="py-5" style="background-color: #f8f9fa;">
+        <div class="container text-center" data-aos="fade-up">
+            <h2 class="fw-bold text-danger mb-3">Program & Unit Pendidikan</h2>
+            <p class="text-secondary mb-5">
+                Yayasan Cerdas Mulia menaungi berbagai jenjang pendidikan untuk membentuk generasi berkarakter, cerdas, dan
+                mandiri.
+            </p>
+
+            <div class="row g-4 justify-content-center">
+
+                <!-- Card 1 -->
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden card-program">
+                        <img src="https://images.unsplash.com/photo-1596496057761-8c99f0f1a4b9?auto=format&fit=crop&w=800&q=80"
+                            class="card-img-top" alt="TK">
+                        <div class="card-body">
+                            <h5 class="fw-bold text-danger">Taman Kanak-Kanak (TK)</h5>
+                            <p class="text-secondary small">
+                                Mengembangkan potensi anak usia dini dengan pendekatan bermain dan belajar yang
+                                menyenangkan.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden card-program">
+                        <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=800&q=80"
+                            class="card-img-top" alt="SD">
+                        <div class="card-body">
+                            <h5 class="fw-bold text-danger">Sekolah Dasar (SD)</h5>
+                            <p class="text-secondary small">
+                                Pendidikan dasar untuk membangun karakter, keimanan, dan kemampuan akademik anak.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden card-program">
+                        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80"
+                            class="card-img-top" alt="SMP">
+                        <div class="card-body">
+                            <h5 class="fw-bold text-danger">Sekolah Menengah Pertama (SMP)</h5>
+                            <p class="text-secondary small">
+                                Membentuk siswa berwawasan luas, mandiri, dan memiliki semangat belajar yang tinggi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden card-program">
+                        <img src="https://images.unsplash.com/photo-1588075592446-270eecad2c42?auto=format&fit=crop&w=800&q=80"
+                            class="card-img-top" alt="SMA">
+                        <div class="card-body">
+                            <h5 class="fw-bold text-danger">Sekolah Menengah Atas (SMA)</h5>
+                            <p class="text-secondary small">
+                                Menyiapkan generasi muda menuju perguruan tinggi dan dunia kerja dengan kompetensi unggul.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    {{-- end section program atau unit --}}
+
+    <!-- ======= Section: Berita & Kegiatan ======= -->
+    <section id="berita" class="py-5" style="background-color: #f8f9fa;">
+        <div class="container" data-aos="fade-up">
+
+            <!-- Judul Section -->
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-danger">Berita & Kegiatan</h2>
+                <p class="text-muted">Kumpulan informasi terbaru dan kegiatan dari Yayasan Cerdas Mulia</p>
+                <hr class="mx-auto mt-3" style="width: 80px; border: 2px solid #d62828; opacity: 1;">
+            </div>
+
+            <!-- Kartu Berita -->
+            <div class="row g-4">
+                <!-- Card 1 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card border-0 shadow-sm h-100 news-card">
+                        <img src="https://source.unsplash.com/600x400/?school,students" class="card-img-top"
+                            alt="Kegiatan 1">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Kegiatan Donasi Buku untuk Sekolah Desa</h5>
+                            <p class="card-text text-muted">Yayasan Cerdas Mulia mengadakan kegiatan donasi buku bagi
+                                sekolah di daerah terpencil untuk meningkatkan minat baca anak-anak.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 pb-3 ps-3">
+                            <a href="#" class="text-danger fw-semibold text-decoration-none">
+                                Baca Selengkapnya <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card border-0 shadow-sm h-100 news-card">
+                        <img src="https://source.unsplash.com/600x400/?education,teacher" class="card-img-top"
+                            alt="Kegiatan 2">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Pelatihan Guru Inovatif 2025</h5>
+                            <p class="card-text text-muted">Sebagai upaya meningkatkan kualitas pengajaran, yayasan
+                                menggelar pelatihan bagi para guru agar lebih kreatif dan adaptif.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 pb-3 ps-3">
+                            <a href="#" class="text-danger fw-semibold text-decoration-none">
+                                Baca Selengkapnya <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card border-0 shadow-sm h-100 news-card">
+                        <img src="https://source.unsplash.com/600x400/?students,classroom" class="card-img-top"
+                            alt="Kegiatan 3">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Lomba Literasi & Sains Nasional</h5>
+                            <p class="card-text text-muted">Siswa binaan Yayasan Cerdas Mulia berhasil meraih juara 1 lomba
+                                literasi tingkat nasional yang diikuti oleh 120 sekolah.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 pb-3 ps-3">
+                            <a href="#" class="text-danger fw-semibold text-decoration-none">
+                                Baca Selengkapnya <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    {{-- end section berita --}}
+
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 900, // durasi animasi dalam milidetik
+            once: true, // animasi hanya jalan sekali saat scroll
+            offset: 120, // jarak mulai animasi dari bawah layar
+        });
+    </script>
 @endsection

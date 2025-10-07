@@ -11,6 +11,9 @@
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+
     <style>
         :root {
             --main-red: #d62828;
@@ -124,6 +127,21 @@
         .navbar-toggler-icon {
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgb(214,40,40)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
         }
+
+        .social-link {
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .social-link:hover {
+            color: #ffebee;
+            transform: scale(1.2);
+        }
+
+        @media (max-width: 768px) {
+            footer .card iframe {
+                height: 150px;
+            }
+        }
     </style>
 </head>
 
@@ -139,18 +157,26 @@
 
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link active" href="#">Beranda</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link " href="{{ route('home') }}">Beranda</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="programDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Profile
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="programDropdown">
+                            <li><a class="dropdown-item" href="{{ route('aboutus') }}">Tentang Kami</a></li>
+                            <li><a class="dropdown-item" href="{{ route('visimisi') }}">Visi Misi</a></li>
+                            <li><a class="dropdown-item" href="{{route('strukturorganisasi')}}">Struktur Organisasi</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="programDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Program
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="programDropdown">
-                            <li><a class="dropdown-item" href="#">TK / PAUD</a></li>
-                            <li><a class="dropdown-item" href="#">SD</a></li>
                             <li><a class="dropdown-item" href="#">SMP</a></li>
-                            <li><a class="dropdown-item" href="#">SMA</a></li>
+                            <li><a class="dropdown-item" href="#">SMK</a></li>
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="#">Berita</a></li>
@@ -175,33 +201,35 @@
     </main>
 
     {{-- footer --}}
-    <!-- ======= Footer Section ======= -->
-    <footer class="footer-section text-light pt-5 pb-4" style="background-color: #d62828;">
+    <footer class="footer-section text-light pt-5 pb-3" style="background-color: #d62828;">
         <div class="container">
-            <div class="row align-items-start">
+            <div class="row g-4 align-items-start">
 
                 <!-- Kolom kiri: Info Yayasan -->
-                <div class="col-lg-6 col-md-12 mb-4">
+                <div class="col-lg-7 col-md-12">
                     <h4 class="fw-bold text-white mb-3">Yayasan Cerdas Mulia</h4>
                     <p class="mb-2">Jl. Pendidikan No. 45, Kota Harapan, Indonesia</p>
-                    <p class="mb-2">📞 0812-3456-7890</p>
-                    <p class="mb-2">✉️ info@cerdasmulia.or.id</p>
+                    <p class="mb-2"><i class="bi bi-telephone-fill me-2"></i>0812-3456-7890</p>
+                    <p class="mb-3"><i class="bi bi-envelope-fill me-2"></i>info@cerdasmulia.or.id</p>
 
-                    <div class="social-icons mt-3">
-                        <a href="#" target="_blank" class="me-3 text-white fs-5"><i class="bi bi-youtube"></i></a>
-                        <a href="#" target="_blank" class="me-3 text-white fs-5"><i
+                    <div class="d-flex align-items-center mt-3">
+                        <a href="#" target="_blank" class="me-3 text-white fs-4 social-link"><i
+                                class="bi bi-youtube"></i></a>
+                        <a href="#" target="_blank" class="me-3 text-white fs-4 social-link"><i
                                 class="bi bi-instagram"></i></a>
-                        <a href="#" target="_blank" class="me-3 text-white fs-5"><i class="bi bi-tiktok"></i></a>
-                        <a href="#" target="_blank" class="text-white fs-5"><i class="bi bi-facebook"></i></a>
+                        <a href="#" target="_blank" class="me-3 text-white fs-4 social-link"><i
+                                class="bi bi-tiktok"></i></a>
+                        <a href="#" target="_blank" class="text-white fs-4 social-link"><i
+                                class="bi bi-facebook"></i></a>
                     </div>
                 </div>
 
                 <!-- Kolom kanan: Google Maps -->
-                <div class="col-lg-6 col-md-12">
-                    <div class="map-container rounded shadow" style="overflow:hidden; border-radius: 10px;">
+                <div class="col-lg-5 col-md-12">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.646066013079!2d110.36388247495741!3d-7.824509177909491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5790c5f36c03%3A0xa3dff1a7b8c73c7e!2sUniversitas%20Negeri%20Yogyakarta!5e0!3m2!1sid!2sid!4v1695652123057!5m2!1sid!2sid"
-                            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.715355765956!2d114.30428177537213!3d-8.42958899160976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd3fce1b12f870f%3A0x534d1a151bd9cf90!2sSMK%2017%20AGUSTUS%201945%20MUNCAR!5e0!3m2!1sid!2sid!4v1759722586350!5m2!1sid!2sid"
+                            width="100%" height="180" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
                     </div>
@@ -210,17 +238,23 @@
 
             <hr class="mt-4 mb-3 text-white opacity-50">
 
-            <div class="text-center">
+            <div class="text-center small">
                 <p class="mb-0">&copy; 2025 <strong>Yayasan Cerdas Mulia</strong>. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
 </body>
 
 </html>
