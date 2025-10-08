@@ -4,86 +4,86 @@
     <style>
         /* versi vidio */
         /* :root {
-                                                                    --main-red: #d62828;
-                                                                    --text-light: #fff;
-                                                                }
+                                                                                    --main-red: #d62828;
+                                                                                    --text-light: #fff;
+                                                                                }
 
-                                                                body {
-                                                                    margin: 0;
-                                                                    padding: 0;
-                                                                    background-color: #f8f9fa;
-                                                                    overflow-x: hidden;
-                                                                }
+                                                                                body {
+                                                                                    margin: 0;
+                                                                                    padding: 0;
+                                                                                    background-color: #f8f9fa;
+                                                                                    overflow-x: hidden;
+                                                                                }
 
-                                                                Hero Section
-                                                                .hero-section {
-                                                                    position: relative;
-                                                                    width: 100%;
-                                                                    height: 100vh;
-                                                                    overflow: hidden;
-                                                                    display: flex;
-                                                                    align-items: center;
-                                                                    justify-content: center;
-                                                                    color: var(--text-light);
-                                                                }
+                                                                                Hero Section
+                                                                                .hero-section {
+                                                                                    position: relative;
+                                                                                    width: 100%;
+                                                                                    height: 100vh;
+                                                                                    overflow: hidden;
+                                                                                    display: flex;
+                                                                                    align-items: center;
+                                                                                    justify-content: center;
+                                                                                    color: var(--text-light);
+                                                                                }
 
-                                                                .hero-section video {
-                                                                    position: absolute;
-                                                                    top: 0;
-                                                                    left: 0;
-                                                                    width: 100%;
-                                                                    height: 100%;
-                                                                    object-fit: cover;
-                                                                    z-index: -1;
-                                                                    filter: brightness(65%);
-                                                                }
+                                                                                .hero-section video {
+                                                                                    position: absolute;
+                                                                                    top: 0;
+                                                                                    left: 0;
+                                                                                    width: 100%;
+                                                                                    height: 100%;
+                                                                                    object-fit: cover;
+                                                                                    z-index: -1;
+                                                                                    filter: brightness(65%);
+                                                                                }
 
-                                                                .hero-content {
-                                                                    text-align: center;
-                                                                    z-index: 2;
-                                                                    max-width: 700px;
-                                                                    padding: 20px;
-                                                                }
+                                                                                .hero-content {
+                                                                                    text-align: center;
+                                                                                    z-index: 2;
+                                                                                    max-width: 700px;
+                                                                                    padding: 20px;
+                                                                                }
 
-                                                                .hero-content h1 {
-                                                                    font-size: 3rem;
-                                                                    font-weight: 700;
-                                                                    color: #fff;
-                                                                    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
-                                                                }
+                                                                                .hero-content h1 {
+                                                                                    font-size: 3rem;
+                                                                                    font-weight: 700;
+                                                                                    color: #fff;
+                                                                                    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+                                                                                }
 
-                                                                .hero-content p {
-                                                                    font-size: 1.2rem;
-                                                                    margin-top: 15px;
-                                                                    color: #f1f1f1;
-                                                                    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
-                                                                }
+                                                                                .hero-content p {
+                                                                                    font-size: 1.2rem;
+                                                                                    margin-top: 15px;
+                                                                                    color: #f1f1f1;
+                                                                                    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+                                                                                }
 
-                                                                .hero-content .btn {
-                                                                    margin-top: 25px;
-                                                                    background-color: var(--main-red);
-                                                                    color: #fff;
-                                                                    border-radius: 30px;
-                                                                    padding: 10px 25px;
-                                                                    font-weight: 600;
-                                                                    transition: all 0.3s ease;
-                                                                }
+                                                                                .hero-content .btn {
+                                                                                    margin-top: 25px;
+                                                                                    background-color: var(--main-red);
+                                                                                    color: #fff;
+                                                                                    border-radius: 30px;
+                                                                                    padding: 10px 25px;
+                                                                                    font-weight: 600;
+                                                                                    transition: all 0.3s ease;
+                                                                                }
 
-                                                                .hero-content .btn:hover {
-                                                                    background-color: #b71c1c;
-                                                                    transform: translateY(-3px);
-                                                                }
+                                                                                .hero-content .btn:hover {
+                                                                                    background-color: #b71c1c;
+                                                                                    transform: translateY(-3px);
+                                                                                }
 
-                                                                Responsif
-                                                                @media (max-width: 768px) {
-                                                                    .hero-content h1 {
-                                                                        font-size: 2.2rem;
-                                                                    }
+                                                                                Responsif
+                                                                                @media (max-width: 768px) {
+                                                                                    .hero-content h1 {
+                                                                                        font-size: 2.2rem;
+                                                                                    }
 
-                                                                    .hero-content p {
-                                                                        font-size: 1rem;
-                                                                    }
-                                                                } */
+                                                                                    .hero-content p {
+                                                                                        font-size: 1rem;
+                                                                                    }
+                                                                                } */
         /* versi vidio end */
 
         /* versi yt */
@@ -97,6 +97,7 @@
             padding: 0;
             overflow-x: hidden;
             background-color: #f8f9fa;
+            font-family: 'Poppins', sans-serif;
         }
 
         .hero-section {
@@ -233,6 +234,73 @@
             line-height: 0;
             margin-bottom: -1px;
         }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            color: #d62828;
+            font-weight: 700;
+        }
+
+        .news-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: #fff;
+        }
+
+        .news-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .news-card img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .news-card-body {
+            padding: 20px;
+        }
+
+        .news-card-body h5 {
+            color: #d62828;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .news-card-body p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .news-card-footer {
+            background-color: transparent;
+            border-top: 1px solid #eee;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        .btn-news {
+            background-color: #d62828;
+            color: white;
+            font-weight: 500;
+            border-radius: 50px;
+            padding: 8px 18px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn-news:hover {
+            background-color: #b71c1c;
+            color: white;
+        }
     </style>
 
     <!-- HERO SECTION versi vidio -->
@@ -284,8 +352,8 @@
         <div class="custom-shape-divider-bottom-hero">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.77-17.35-168.26-13.21-250.45,3.84
-                     C406.34,36.47,327.41,67.17,246.65,84.69c-89,19.12-175.47,19.9-261.64-1.54V120H1200V95.8
-                    C1132.19,109.07,1058.76,111.13,985.66,92.83Z" fill="#fff"></path>
+                                     C406.34,36.47,327.41,67.17,246.65,84.69c-89,19.12-175.47,19.9-261.64-1.54V120H1200V95.8
+                                    C1132.19,109.07,1058.76,111.13,985.66,92.83Z" fill="#fff"></path>
             </svg>
         </div>
     </section>
@@ -299,14 +367,14 @@
 
                 <!-- Gambar Kegiatan -->
                 <div class="col-lg-6" data-aos="fade-right">
-                    <img src="{{asset('storage/' . $datas->image)}}"
-                        alt="{{$datas->nama_yayasan}}" class="img-fluid rounded-4 shadow">
+                    <img src="{{ asset('storage/' . $datas->image) }}" alt="{{ $datas->nama_yayasan }}"
+                        class="img-fluid rounded-4 shadow">
                 </div>
 
                 <!-- Isi Tentang Kami -->
                 <div class="col-lg-6" data-aos="fade-left">
-                    <h2 class="fw-bold text-danger mb-3">Tentang {{$datas->nama_yayasan}}</h2>
-                    <p class="text-secondary">{{$datas->description}}</p>
+                    <h2 class="fw-bold text-danger mb-3">Tentang {{ $datas->nama_yayasan }}</h2>
+                    <p class="text-secondary">{{ $datas->description }}</p>
                     {{-- <p class="text-secondary">
                         Yayasan Cerdas Mulia didirikan dengan tujuan untuk menciptakan generasi yang berakhlak mulia,
                         cerdas, dan berdaya saing tinggi.
@@ -319,7 +387,7 @@
                     </p> --}}
                     <ul class="list-unstyled mt-3">
                         @foreach ($misilist as $m)
-                        <li><i class="bi bi-check-circle-fill text-danger me-2"></i>{{trim($m)}}</li>
+                            <li><i class="bi bi-check-circle-fill text-danger me-2"></i>{{ trim($m) }}</li>
                         @endforeach
                     </ul>
 
@@ -354,7 +422,7 @@
 
             <div class="row g-4 justify-content-center">
 
-                <!-- Card 1 -->
+                {{-- <!-- Card 1 -->
                 <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
                     <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden card-program">
                         <img src="https://images.unsplash.com/photo-1596496057761-8c99f0f1a4b9?auto=format&fit=crop&w=800&q=80"
@@ -367,9 +435,9 @@
                             </p>
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
-                <!-- Card 2 -->
+                {{-- <!-- Card 2 -->
                 <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
                     <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden card-program">
                         <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=800&q=80"
@@ -381,7 +449,7 @@
                             </p>
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
                 <!-- Card 3 -->
                 <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
@@ -403,7 +471,7 @@
                         <img src="https://images.unsplash.com/photo-1588075592446-270eecad2c42?auto=format&fit=crop&w=800&q=80"
                             class="card-img-top" alt="SMA">
                         <div class="card-body">
-                            <h5 class="fw-bold text-danger">Sekolah Menengah Atas (SMA)</h5>
+                            <h5 class="fw-bold text-danger">Sekolah Menengah Kejuruan (SMK)</h5>
                             <p class="text-secondary small">
                                 Menyiapkan generasi muda menuju perguruan tinggi dan dunia kerja dengan kompetensi unggul.
                             </p>
@@ -417,74 +485,33 @@
 
     {{-- end section program atau unit --}}
 
-    <!-- ======= Section: Berita & Kegiatan ======= -->
-    <section id="berita" class="py-5" style="background-color: #f8f9fa;">
+    <!-- ======= Berita Section ======= -->
+    <section class="py-5">
         <div class="container" data-aos="fade-up">
-
-            <!-- Judul Section -->
-            <div class="text-center mb-5">
-                <h2 class="fw-bold text-danger">Berita & Kegiatan</h2>
-                <p class="text-muted">Kumpulan informasi terbaru dan kegiatan dari Yayasan Cerdas Mulia</p>
-                <hr class="mx-auto mt-3" style="width: 80px; border: 2px solid #d62828; opacity: 1;">
+            <div class="section-header">
+                <h2>Berita & Kegiatan</h2>
+                <p>Kumpulan informasi dan kegiatan terbaru dari Yayasan Cerdas Mulia.</p>
             </div>
 
-            <!-- Kartu Berita -->
             <div class="row g-4">
-                <!-- Card 1 -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card border-0 shadow-sm h-100 news-card">
-                        <img src="https://source.unsplash.com/600x400/?school,students" class="card-img-top"
-                            alt="Kegiatan 1">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Kegiatan Donasi Buku untuk Sekolah Desa</h5>
-                            <p class="card-text text-muted">Yayasan Cerdas Mulia mengadakan kegiatan donasi buku bagi
-                                sekolah di daerah terpencil untuk meningkatkan minat baca anak-anak.</p>
-                        </div>
-                        <div class="card-footer bg-white border-0 pb-3 ps-3">
-                            <a href="#" class="text-danger fw-semibold text-decoration-none">
-                                Baca Selengkapnya <i class="bi bi-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card border-0 shadow-sm h-100 news-card">
-                        <img src="https://source.unsplash.com/600x400/?education,teacher" class="card-img-top"
-                            alt="Kegiatan 2">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Pelatihan Guru Inovatif 2025</h5>
-                            <p class="card-text text-muted">Sebagai upaya meningkatkan kualitas pengajaran, yayasan
-                                menggelar pelatihan bagi para guru agar lebih kreatif dan adaptif.</p>
-                        </div>
-                        <div class="card-footer bg-white border-0 pb-3 ps-3">
-                            <a href="#" class="text-danger fw-semibold text-decoration-none">
-                                Baca Selengkapnya <i class="bi bi-arrow-right"></i>
-                            </a>
+                @foreach ($beritas as $berita)
+                    <!-- Berita 1 -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card news-card h-100">
+                            <img src="{{asset('storage/' . $berita->thumbnail)}}"
+                                class="card-img-top" alt="{{$berita->judul_berita}}">
+                            <div class="news-card-body">
+                                <h5>{{$berita->judul_berita}}</h5>
+                                <p>{{ Str::limit($berita->content, 100, '...') }}</p>
+                                <a href="{{route('berita.show', $berita->slug)}}" class="btn-news">Baca Selengkapnya</a>
+                            </div>
+                            <div class="news-card-footer">
+                                <i class="bi bi-calendar-event me-2"></i> {{$berita->formatted_date}}
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card border-0 shadow-sm h-100 news-card">
-                        <img src="https://source.unsplash.com/600x400/?students,classroom" class="card-img-top"
-                            alt="Kegiatan 3">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Lomba Literasi & Sains Nasional</h5>
-                            <p class="card-text text-muted">Siswa binaan Yayasan Cerdas Mulia berhasil meraih juara 1 lomba
-                                literasi tingkat nasional yang diikuti oleh 120 sekolah.</p>
-                        </div>
-                        <div class="card-footer bg-white border-0 pb-3 ps-3">
-                            <a href="#" class="text-danger fw-semibold text-decoration-none">
-                                Baca Selengkapnya <i class="bi bi-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
-
         </div>
     </section>
 

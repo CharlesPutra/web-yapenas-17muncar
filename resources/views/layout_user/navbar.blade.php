@@ -22,6 +22,7 @@
 
         body {
             background-color: #f8f9fa;
+            font-family: 'Poppins', sans-serif;
         }
 
         /* Navbar dasar */
@@ -166,7 +167,8 @@
                         <ul class="dropdown-menu" aria-labelledby="programDropdown">
                             <li><a class="dropdown-item" href="{{ route('aboutus') }}">Tentang Kami</a></li>
                             <li><a class="dropdown-item" href="{{ route('visimisi') }}">Visi Misi</a></li>
-                            <li><a class="dropdown-item" href="{{route('strukturorganisasi')}}">Struktur Organisasi</a></li>
+                            <li><a class="dropdown-item" href="{{ route('strukturorganisasi') }}">Struktur
+                                    Organisasi</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -179,7 +181,7 @@
                             <li><a class="dropdown-item" href="#">SMK</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="{{route('berita')}}">Berita</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('berita') }}">Berita</a></li>
                 </ul>
 
                 <!-- Garis pembatas -->
