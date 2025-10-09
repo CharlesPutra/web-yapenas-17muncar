@@ -65,34 +65,24 @@
     <section class="about-hero" data-aos="fade-in">
         <div class="container">
             <h1 data-aos="fade-up">Tentang Kami</h1>
-            <p data-aos="fade-up" data-aos-delay="200">Yayasan Cerdas Mulia — Membangun Generasi Cerdas & Berakhlak Mulia</p>
+            <p data-aos="fade-up" data-aos-delay="200">{{$datas->nama_yayasan}} — Membangun Generasi Cerdas & Berakhlak Mulia</p>
         </div>
     </section>
 
-    <!-- Wave Divider -->
-    <div class="wave-divider">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120">
-            <path fill="#ffffff" fill-opacity="1"
-                d="M0,32L60,48C120,64,240,96,360,117.3C480,139,600,149,720,133.3C840,117,960,75,1080,58.7C1200,43,1320,53,1380,58.7L1440,64L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
-            </path>
-        </svg>
-    </div>
+
 
     <!-- ===== Nama & Foto Yayasan ===== -->
     <section id="profil">
         <div class="container" data-aos="fade-up">
-            <h2 class="section-title">Yayasan Cerdas Mulia</h2>
+            <h2 class="section-title">{{$datas->nama_yayasan}}</h2>
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <img src="https://source.unsplash.com/600x400/?school,building,education" alt="Foto Yayasan"
+                    <img src="{{asset('storage/'.$datas->image)}}" alt="Foto Yayasan"
                         class="img-fluid about-image">
                 </div>
                 <div class="col-lg-6">
                     <p class="text-muted">
-                        Yayasan Cerdas Mulia merupakan lembaga pendidikan yang berdiri dengan komitmen untuk meningkatkan
-                        kualitas sumber daya manusia melalui pendidikan yang berkarakter, berilmu, dan berakhlak mulia.
-                        Sejak didirikan, yayasan ini berupaya menjadi pelopor pendidikan yang berpihak pada pengembangan
-                        potensi peserta didik agar mampu bersaing di era global.
+                       {{$datas->description}}
                     </p>
                 </div>
             </div>
@@ -105,7 +95,7 @@
             <div class="motto-box mx-auto col-lg-8">
                 <i class="bi bi-lightbulb-fill"></i>
                 <h4 class="fw-bold">Motto Yayasan:</h4>
-                <p class="mb-0 fst-italic">"Mendidik dengan Hati, Membangun Masa Depan dengan Ilmu"</p>
+                <p class="mb-0 fst-italic">"{{$datas->motto}}"</p>
             </div>
         </div>
     </section>
@@ -118,18 +108,9 @@
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                     <p class="text-muted">
-                        Yayasan Cerdas Mulia didirikan pada tahun 2010 oleh sekelompok pendidik dan pemerhati pendidikan
-                        yang memiliki visi untuk memajukan generasi muda Indonesia.
-                        Awalnya, yayasan ini hanya mengelola satu sekolah dasar kecil di Kota Harapan, namun berkat dedikasi
-                        dan kepercayaan masyarakat,
-                        kini telah berkembang menjadi lembaga pendidikan yang menaungi beberapa unit sekolah.
+                       {{$datas->history}}
                     </p>
-                    <p class="text-muted">
-                        Dalam perjalanannya, Yayasan Cerdas Mulia berhasil menorehkan berbagai prestasi akademik dan
-                        non-akademik,
-                        serta menjadi mitra aktif pemerintah dan masyarakat dalam mengembangkan kualitas pendidikan
-                        nasional.
-                    </p>
+                   
                 </div>
             </div>
         </div>

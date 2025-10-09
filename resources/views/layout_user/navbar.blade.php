@@ -143,6 +143,12 @@
                 height: 150px;
             }
         }
+          section {
+            min-height: 70vh; /* jaga jarak supaya footer tetap di bawah */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
     </style>
 </head>
 

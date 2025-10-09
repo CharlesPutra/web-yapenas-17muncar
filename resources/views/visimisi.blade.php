@@ -59,13 +59,7 @@
             margin-bottom: 10px;
         }
 
-        footer {
-            background-color: #d62828;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 80px;
-        }
+       
     </style>
 
     <section class="py-5">
@@ -84,9 +78,7 @@
                         </div>
                         <div class="card-body">
                             <p>
-                                Menjadi yayasan pendidikan yang unggul dalam pembentukan generasi berakhlak mulia, berilmu,
-                                serta
-                                berdaya saing tinggi di era globalisasi.
+                               {{$datas->visi}}
                             </p>
                         </div>
                     </div>
@@ -100,10 +92,10 @@
                         </div>
                         <div class="card-body">
                             <ul class="mb-0">
-                                <li>Menyelenggarakan pendidikan berkualitas berbasis nilai moral dan spiritual.</li>
-                                <li>Memberdayakan tenaga pendidik yang profesional dan berintegritas tinggi.</li>
-                                <li>Mendorong siswa agar kreatif, inovatif, dan mampu bersaing secara global.</li>
-                                <li>Membangun lingkungan belajar yang nyaman, aman, dan berkarakter.</li>
+                                @foreach ($misilist as $m)
+                                <li>{{trim($m)}}</li>
+                                @endforeach
+
                             </ul>
                         </div>
                     </div>

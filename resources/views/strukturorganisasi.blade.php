@@ -61,82 +61,52 @@
             border-radius: 2px;
         }
 
-        footer {
-            background-color: #d62828;
-            color: white;
+        .empty-message {
             text-align: center;
-            padding: 20px 0;
-            margin-top: 60px;
+            color: #888;
+            font-size: 1.1rem;
+            margin-top: 40px;
         }
     </style>
 
-    <section class="py-5">
+    <section class="py-2">
         <div class="container" data-aos="fade-up">
             <div class="section-header">
                 <h2>Struktur Organisasi Yayasan Cerdas Mulia</h2>
                 <p>Susunan pengurus dan staf yang berperan dalam mengelola dan mengembangkan yayasan.</p>
             </div>
 
-            <!-- Ketua Yayasan -->
-            <div class="row justify-content-center mb-4" data-aos="zoom-in">
-                <div class="col-md-4">
-                    <div class="org-card">
-                        <img src="https://via.placeholder.com/110" alt="Ketua Yayasan">
-                        <h5>Drs. Ahmad Rahman</h5>
-                        <p>Ketua Yayasan</p>
-                    </div>
+            @if ($structureOrganizations->isEmpty())
+                <div class="empty-message">
+                    <p><strong>Struktur tidak ada.</strong></p>
                 </div>
-            </div>
+            @else
+                @php
+                    $lastPosition = null;
+                @endphp
 
-            <div class="divider"></div>
+                <div class="row justify-content-center g-4">
+                    @foreach ($structureOrganizations as $org)
+                        {{-- Divider otomatis jika posisi berubah --}}
+                        @if ($lastPosition && $lastPosition !== $org->posisi)
+                            <div class="divider"></div>
+                        @endif
 
-            <!-- Kepala Sekolah -->
-            <div class="row justify-content-center mb-4" data-aos="fade-up">
-                <div class="col-md-4">
-                    <div class="org-card">
-                        <img src="https://via.placeholder.com/110" alt="Kepala Sekolah">
-                        <h5>Nurhayati, S.Pd</h5>
-                        <p>Kepala Sekolah</p>
-                    </div>
+                        <div class="col-md-3 col-6">
+                            <div class="org-card">
+                                <img src="{{ asset('storage/' . $org->image) }}" alt="{{ $org->nama_petugas }}">
+                                <h5>{{ $org->nama_petugas }}</h5>
+                                <p>{{ $org->posisi }}</p>
+                                <small>{{ $org->contact }}</small>
+                            </div>
+                        </div>
+
+                        @php
+                            $lastPosition = $org->posisi;
+                        @endphp
+                    @endforeach
                 </div>
-            </div>
-
-            <div class="divider"></div>
-
-            <!-- Guru dan Staff -->
-            <div class="row justify-content-center g-4" data-aos="fade-up">
-                <div class="col-md-3 col-6">
-                    <div class="org-card">
-                        <img src="https://via.placeholder.com/110" alt="Guru">
-                        <h5>Budi Santoso</h5>
-                        <p>Guru Matematika</p>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-6">
-                    <div class="org-card">
-                        <img src="https://via.placeholder.com/110" alt="Guru">
-                        <h5>Siti Aminah</h5>
-                        <p>Guru Bahasa Indonesia</p>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-6">
-                    <div class="org-card">
-                        <img src="https://via.placeholder.com/110" alt="Staff">
-                        <h5>Rizki Hidayat</h5>
-                        <p>Staff Administrasi</p>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-6">
-                    <div class="org-card">
-                        <img src="https://via.placeholder.com/110" alt="Staff">
-                        <h5>Lina Hartati</h5>
-                        <p>Keuangan</p>
-                    </div>
-                </div>
-            </div>
+            @endif
         </div>
     </section>
 @endsection

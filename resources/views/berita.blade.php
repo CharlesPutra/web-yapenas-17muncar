@@ -75,70 +75,110 @@
             color: white;
         }
 
-        footer {
-            background-color: #d62828;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 80px;
+        .pagination .page-link {
+            border-radius: 8px;
+            margin: 0 4px;
+            transition: 0.3s;
+        }
+
+        .pagination .page-link:hover {
+            background-color: #b71c1c !important;
+            color: #fff !important;
+        }
+
+        .pagination .active .page-link {
+            background-color: #d62828 !important;
+            border-color: #d62828 !important;
         }
     </style>
 
 
-  <!-- ======= Berita Section ======= -->
-  <section class="py-5">
-    <div class="container" data-aos="fade-up">
-      <div class="section-header">
-        <h2>Berita & Kegiatan</h2>
-        <p>Kumpulan informasi dan kegiatan terbaru dari Yayasan Cerdas Mulia.</p>
-      </div>
+    <!-- ======= Berita Section ======= -->
+    <section class="py-5">
+        <div class="container" data-aos="fade-up">
+            <div class="section-header">
+                <h2>Berita & Kegiatan</h2>
+                <p>Kumpulan informasi dan kegiatan terbaru dari Yayasan Cerdas Mulia.</p>
+            </div>
 
-      <div class="row g-4">
-        <!-- Berita 1 -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="card news-card h-100">
-            <img src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238?auto=format&fit=crop&w=900&q=60" class="card-img-top" alt="Kegiatan Sosial">
-            <div class="news-card-body">
-              <h5>Kegiatan Bakti Sosial di Desa Harapan</h5>
-              <p>Yayasan Cerdas Mulia melaksanakan kegiatan bakti sosial bersama siswa dan guru untuk membantu masyarakat sekitar.</p>
-              <a href="#" class="btn-news">Baca Selengkapnya</a>
+            <div class="row g-4">
+                <!-- Berita 1 -->
+                @forelse ($datas as $b)
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card news-card h-100">
+                            <img src="{{ asset('storage/' . $b->thumbnail) }}" class="card-img-top" alt="Kegiatan Sosial">
+                            <div class="news-card-body">
+                                <h5>{{ $b->judul_berita }}</h5>
+                                <p>{{ Str::limit($b->content, 100, '...') }}</p>
+                                <a href="{{ route('berita.show', $b->slug) }}" class="btn-news">Baca Selengkapnya</a>
+                            </div>
+                            <div class="news-card-footer">
+                                <i class="bi bi-calendar-event me-2"></i> {{ $b->formatted_date }}
+                            </div>
+                        </div>
+                    </div>
+                @empty
+                    <p class="text-center text-muted">Belum ada berita yang tersedia.</p>
+                @endforelse
             </div>
-            <div class="news-card-footer">
-              <i class="bi bi-calendar-event me-2"></i> 20 September 2025
-            </div>
-          </div>
         </div>
+        <!-- Pagination -->
+        @if ($datas->hasPages())
+            <div class="d-flex justify-content-center mt-5">
+                <nav>
+                    <ul class="pagination justify-content-center mb-0">
+                        {{-- Tombol Sebelumnya --}}
+                        @if ($datas->onFirstPage())
+                            <li class="page-item disabled">
+                                <span class="page-link border-0 bg-light text-secondary">‹</span>
+                            </li>
+                        @else
+                            <li class="page-item">
+                                <a class="page-link border-0 text-white bg-danger" href="{{ $datas->previousPageUrl() }}"
+                                    rel="prev">‹</a>
+                            </li>
+                        @endif
 
-        <!-- Berita 2 -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-          <div class="card news-card h-100">
-            <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=900&q=60" class="card-img-top" alt="Seminar Pendidikan">
-            <div class="news-card-body">
-              <h5>Seminar Pendidikan Nasional 2025</h5>
-              <p>Guru dan siswa berpartisipasi dalam seminar pendidikan nasional yang membahas inovasi pembelajaran abad 21.</p>
-              <a href="#" class="btn-news">Baca Selengkapnya</a>
-            </div>
-            <div class="news-card-footer">
-              <i class="bi bi-calendar-event me-2"></i> 12 Agustus 2025
-            </div>
-          </div>
-        </div>
+                        {{-- Angka Halaman --}}
+                        @foreach ($datas->links()->elements as $element)
+                            @if (is_string($element))
+                                <li class="page-item disabled"><span
+                                        class="page-link bg-light text-secondary border-0">{{ $element }}</span>
+                                </li>
+                            @endif
 
-        <!-- Berita 3 -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-          <div class="card news-card h-100">
-            <img src="https://images.unsplash.com/photo-1559027615-ce3a25d2729f?auto=format&fit=crop&w=900&q=60" class="card-img-top" alt="Lomba Sains">
-            <div class="news-card-body">
-              <h5>Siswa Raih Juara Lomba Sains Tingkat Provinsi</h5>
-              <p>Prestasi membanggakan diraih siswa Yayasan Cerdas Mulia dalam lomba sains tingkat provinsi 2025.</p>
-              <a href="#" class="btn-news">Baca Selengkapnya</a>
+                            @if (is_array($element))
+                                @foreach ($element as $page => $url)
+                                    @if ($page == $datas->currentPage())
+                                        <li class="page-item active">
+                                            <span
+                                                class="page-link bg-danger text-white border-0 fw-bold">{{ $page }}</span>
+                                        </li>
+                                    @else
+                                        <li class="page-item">
+                                            <a class="page-link text-danger border-0 bg-white"
+                                                href="{{ $url }}">{{ $page }}</a>
+                                        </li>
+                                    @endif
+                                @endforeach
+                            @endif
+                        @endforeach
+
+                        {{-- Tombol Selanjutnya --}}
+                        @if ($datas->hasMorePages())
+                            <li class="page-item">
+                                <a class="page-link border-0 text-white bg-danger" href="{{ $datas->nextPageUrl() }}"
+                                    rel="next">›</a>
+                            </li>
+                        @else
+                            <li class="page-item disabled">
+                                <span class="page-link border-0 bg-light text-secondary">›</span>
+                            </li>
+                        @endif
+                    </ul>
+                </nav>
             </div>
-            <div class="news-card-footer">
-              <i class="bi bi-calendar-event me-2"></i> 3 Juli 2025
-            </div>
-          </div>
+        @endif
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 @endsection

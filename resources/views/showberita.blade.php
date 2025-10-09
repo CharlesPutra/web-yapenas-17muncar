@@ -49,29 +49,43 @@
         }
     </style>
 
-        {{-- Header Gambar --}}
-    <div class="berita-header">
-        <img src="{{ asset('storage/' . $berita->thumbnail) }}" alt="Thumbnail Berita">
-        <div class="judul" data-aos="fade-up" data-aos-duration="1000">
-            <h1>{{ $berita->judul_berita }}</h1>
-            <p class="tanggal">{{ \Carbon\Carbon::parse($berita->published_at)->translatedFormat('d F Y') }}</p>
-        </div>
-    </div>
+    <section class="py-5" style="background-color: #f8f9fa;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
 
-    {{-- Konten Berita --}}
-    <div class="container berita-content" data-aos="fade-up" data-aos-duration="1200">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 col-md-10">
-                <div class="content-text">
-                    {!! nl2br(e($berita->content)) !!}
+                    <!-- Thumbnail / Banner -->
+                    <div class="news-banner mb-4 position-relative">
+                        <img src="{{ asset('storage/' . $berita->thumbnail) }}" class="img-fluid rounded shadow-sm w-100"
+                            alt="{{ $berita->judul_berita }}" style="max-height: 450px; object-fit: cover;">
+
+                        <!-- Tanggal publikasi -->
+                        <span class="badge bg-danger position-absolute top-0 start-0 m-3 px-3 py-2 shadow">
+                            {{ $berita->formatted_date }}
+                        </span>
+                    </div>
+
+                    <!-- Judul Berita -->
+                    <h1 class="fw-bold mb-3 text-center">{{ $berita->judul_berita }}</h1>
+                    <hr class="mb-4"
+                        style="width: 120px; height: 3px; background-color: #d62828; border: none; margin: auto;">
+
+                    <!-- Konten Berita -->
+                    <div class="news-content mt-5" style="line-height: 1.8; font-size: 1.1rem; color: #333;">
+                        {!! nl2br(e($berita->content)) !!}
+                    </div>
+
+                    <!-- Garis pemisah -->
+                    <hr class="my-5">
+
+                    <!-- Tombol Kembali -->
+                    <div class="text-center">
+                        <a href="{{ route('berita') }}" class="btn btn-outline-danger px-4 py-2 rounded-pill">
+                            <i class="bi bi-arrow-left me-2"></i>Kembali ke Daftar Berita
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    {{-- Tombol Kembali --}}
-    <div class="text-center my-5">
-        <a href="{{ route('home') }}" class="btn btn-danger px-4">← Kembali ke Daftar Berita</a>
-    </div>
-
+    </section>
 @endsection
