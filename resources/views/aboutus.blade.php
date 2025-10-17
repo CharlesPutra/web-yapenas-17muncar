@@ -11,7 +11,7 @@
         /* Hero Section */
         .about-hero {
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                url('https://source.unsplash.com/1600x600/?education,school,children');
+                url('{{asset('img/back about us.jpg')}}');
             background-size: cover;
             background-position: center;
             color: white;
@@ -89,7 +89,7 @@
         </div>
     </section>
 
-    <!-- ===== Motto Yayasan ===== -->
+    {{-- <!-- ===== Motto Yayasan ===== -->
     <section id="motto" style="background-color: #f8f9fa;">
         <div class="container" data-aos="zoom-in">
             <div class="motto-box mx-auto col-lg-8">
@@ -98,7 +98,7 @@
                 <p class="mb-0 fst-italic">"{{$datas->motto}}"</p>
             </div>
         </div>
-    </section>
+    </section> --}}
 
 
     <!-- ===== Sejarah Yayasan ===== -->
@@ -110,7 +110,7 @@
                     <p class="text-muted">
                        {{$datas->history}}
                     </p>
-                   
+
                 </div>
             </div>
         </div>

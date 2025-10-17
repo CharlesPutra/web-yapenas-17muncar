@@ -10,7 +10,7 @@ class HomeController extends Controller
 {
     public function index() {
         $datas = Profile::orderBy('created_at', 'desc')->first();
-        $beritas = news::orderBy('created_at', 'desc')->take(3)->get();
+        $beritas = news::orderBy('created_at', 'desc')->take(5)->get();
         //filtering mislist
         $misilist = explode(',', $datas->misi);
         return view('welcome',compact('datas','misilist','beritas'));

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar Yayasan Pendidikan</title>
+    <title>YAPENAS</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -12,6 +12,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    {{-- web icon yapenas --}}
+    <link rel="web icon" href="{{ asset('img/LOGO YAPENAS.png') }}">
 
 
     <style>
@@ -126,7 +129,7 @@
         }
 
         .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgb(214,40,40)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+            background-image: url({{ asset('img/LOGO YAPENAS.png') }});
         }
 
         .social-link {
@@ -143,11 +146,19 @@
                 height: 150px;
             }
         }
-          section {
-            min-height: 70vh; /* jaga jarak supaya footer tetap di bawah */
+
+        section {
+            min-height: 70vh;
+            /* jaga jarak supaya footer tetap di bawah */
             display: flex;
             flex-direction: column;
             justify-content: center;
+        }
+
+        @media (max-width: 768px) {
+            #navha {
+                font-size: 14px
+            }
         }
     </style>
 </head>
@@ -156,14 +167,20 @@
 
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Yayasan Yapenas</a>
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="{{ asset('img/LOGO YAPENAS.png') }}" alt="Logo YAPENAS" class="me-2"
+                    style="height: 80px; width: auto; object-fit: contain;">
+                <h5 class="mb-0 fw-semibold text-danger" id="navha">YAPENAS 17 AGUSTUS 1945</h5>
+            </a>
+
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav gap-2">
                     <li class="nav-item"><a class="nav-link " href="{{ route('home') }}">Beranda</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="programDropdown" role="button"
@@ -180,7 +197,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="programDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Program
+                            Unit
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="programDropdown">
                             <li><a class="dropdown-item" href="#">SMP</a></li>
@@ -215,10 +232,10 @@
 
                 <!-- Kolom kiri: Info Yayasan -->
                 <div class="col-lg-7 col-md-12">
-                    <h4 class="fw-bold text-white mb-3">Yayasan Cerdas Mulia</h4>
+                    <h4 class="fw-bold text-white mb-3">YAPENAS 17 AGUSTUS 1945</h4>
                     <p class="mb-2">Jl. Pendidikan No. 45, Kota Harapan, Indonesia</p>
                     <p class="mb-2"><i class="bi bi-telephone-fill me-2"></i>0812-3456-7890</p>
-                    <p class="mb-3"><i class="bi bi-envelope-fill me-2"></i>info@cerdasmulia.or.id</p>
+                    <p class="mb-3"><i class="bi bi-envelope-fill me-2"></i>info@yapenas.or.id</p>
 
                     <div class="d-flex align-items-center mt-3">
                         <a href="#" target="_blank" class="me-3 text-white fs-4 social-link"><i
@@ -247,7 +264,7 @@
             <hr class="mt-4 mb-3 text-white opacity-50">
 
             <div class="text-center small">
-                <p class="mb-0">&copy; 2025 <strong>Yayasan Cerdas Mulia</strong>. All rights reserved.</p>
+                <p class="mb-0">&copy; {{ date('Y') }} <strong>YAPENAS 17 AGUSTUS 1945</strong>. All rights reserved.</p>
             </div>
         </div>
     </footer>

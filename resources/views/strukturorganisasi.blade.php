@@ -72,7 +72,7 @@
     <section class="py-2">
         <div class="container" data-aos="fade-up">
             <div class="section-header">
-                <h2>Struktur Organisasi Yayasan Cerdas Mulia</h2>
+                <h2>Struktur Organisasi YAPENAS 17 AGUSTUS 1945</h2>
                 <p>Susunan pengurus dan staf yang berperan dalam mengelola dan mengembangkan yayasan.</p>
             </div>
 
