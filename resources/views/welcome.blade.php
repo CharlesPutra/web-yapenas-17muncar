@@ -4,89 +4,90 @@
     <style>
         /* versi vidio */
         /* :root {
-                                                                                                --main-red: #d62828;
-                                                                                                --text-light: #fff;
-                                                                                            }
+                                                                                                        --main-red: #d62828;
+                                                                                                        --text-light: #fff;
+                                                                                                    }
 
-                                                                                            body {
-                                                                                                margin: 0;
-                                                                                                padding: 0;
-                                                                                                background-color: #f8f9fa;
-                                                                                                overflow-x: hidden;
-                                                                                            }
+                                                                                                    body {
+                                                                                                        margin: 0;
+                                                                                                        padding: 0;
+                                                                                                        background-color: #f8f9fa;
+                                                                                                        overflow-x: hidden;
+                                                                                                    }
 
-                                                                                            Hero Section
-                                                                                            .hero-section {
-                                                                                                position: relative;
-                                                                                                width: 100%;
-                                                                                                height: 100vh;
-                                                                                                overflow: hidden;
-                                                                                                display: flex;
-                                                                                                align-items: center;
-                                                                                                justify-content: center;
-                                                                                                color: var(--text-light);
-                                                                                            }
+                                                                                                    Hero Section
+                                                                                                    .hero-section {
+                                                                                                        position: relative;
+                                                                                                        width: 100%;
+                                                                                                        height: 100vh;
+                                                                                                        overflow: hidden;
+                                                                                                        display: flex;
+                                                                                                        align-items: center;
+                                                                                                        justify-content: center;
+                                                                                                        color: var(--text-light);
+                                                                                                    }
 
-                                                                                            .hero-section video {
-                                                                                                position: absolute;
-                                                                                                top: 0;
-                                                                                                left: 0;
-                                                                                                width: 100%;
-                                                                                                height: 100%;
-                                                                                                object-fit: cover;
-                                                                                                z-index: -1;
-                                                                                                filter: brightness(65%);
-                                                                                            }
+                                                                                                    .hero-section video {
+                                                                                                        position: absolute;
+                                                                                                        top: 0;
+                                                                                                        left: 0;
+                                                                                                        width: 100%;
+                                                                                                        height: 100%;
+                                                                                                        object-fit: cover;
+                                                                                                        z-index: -1;
+                                                                                                        filter: brightness(65%);
+                                                                                                    }
 
-                                                                                            .hero-content {
-                                                                                                text-align: center;
-                                                                                                z-index: 2;
-                                                                                                max-width: 700px;
-                                                                                                padding: 20px;
-                                                                                            }
+                                                                                                    .hero-content {
+                                                                                                        text-align: center;
+                                                                                                        z-index: 2;
+                                                                                                        max-width: 700px;
+                                                                                                        padding: 20px;
+                                                                                                    }
 
-                                                                                            .hero-content h1 {
-                                                                                                font-size: 3rem;
-                                                                                                font-weight: 700;
-                                                                                                color: #fff;
-                                                                                                text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
-                                                                                            }
+                                                                                                    .hero-content h1 {
+                                                                                                        font-size: 3rem;
+                                                                                                        font-weight: 700;
+                                                                                                        color: #fff;
+                                                                                                        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+                                                                                                    }
 
-                                                                                            .hero-content p {
-                                                                                                font-size: 1.2rem;
-                                                                                                margin-top: 15px;
-                                                                                                color: #f1f1f1;
-                                                                                                text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
-                                                                                            }
+                                                                                                    .hero-content p {
+                                                                                                        font-size: 1.2rem;
+                                                                                                        margin-top: 15px;
+                                                                                                        color: #f1f1f1;
+                                                                                                        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+                                                                                                    }
 
-                                                                                            .hero-content .btn {
-                                                                                                margin-top: 25px;
-                                                                                                background-color: var(--main-red);
-                                                                                                color: #fff;
-                                                                                                border-radius: 30px;
-                                                                                                padding: 10px 25px;
-                                                                                                font-weight: 600;
-                                                                                                transition: all 0.3s ease;
-                                                                                            }
+                                                                                                    .hero-content .btn {
+                                                                                                        margin-top: 25px;
+                                                                                                        background-color: var(--main-red);
+                                                                                                        color: #fff;
+                                                                                                        border-radius: 30px;
+                                                                                                        padding: 10px 25px;
+                                                                                                        font-weight: 600;
+                                                                                                        transition: all 0.3s ease;
+                                                                                                    }
 
-                                                                                            .hero-content .btn:hover {
-                                                                                                background-color: #b71c1c;
-                                                                                                transform: translateY(-3px);
-                                                                                            }
+                                                                                                    .hero-content .btn:hover {
+                                                                                                        background-color: #b71c1c;
+                                                                                                        transform: translateY(-3px);
+                                                                                                    }
 
-                                                                                            Responsif
-                                                                                            @media (max-width: 768px) {
-                                                                                                .hero-content h1 {
-                                                                                                    font-size: 2.2rem;
-                                                                                                }
+                                                                                                    Responsif
+                                                                                                    @media (max-width: 768px) {
+                                                                                                        .hero-content h1 {
+                                                                                                            font-size: 2.2rem;
+                                                                                                        }
 
-                                                                                                .hero-content p {
-                                                                                                    font-size: 1rem;
-                                                                                                }
-                                                                                            } */
+                                                                                                        .hero-content p {
+                                                                                                            font-size: 1rem;
+                                                                                                        }
+                                                                                                    } */
         /* versi vidio end */
 
         /* versi yt */
+
         :root {
             --main-red: #d62828;
             --text-light: #fff;
@@ -109,6 +110,7 @@
             align-items: center;
             justify-content: center;
             color: var(--text-light);
+
         }
 
         /* YouTube video embed as background */
@@ -139,6 +141,10 @@
             z-index: 2;
             max-width: 700px;
             padding: 20px;
+              top: 10% !important; /* geser teks ke atas */
+  transform: translate(-50%, 0) !important; /* hapus efek tengah vertikal */
+  position: absolute;
+  left: 50%;
         }
 
         .hero-content h1 {
@@ -281,11 +287,6 @@
                 font-size: 0.9rem;
             }
         }
-       .button-container {
-  text-align: right; /* tombol ke kanan */
-}
-
-
     </style>
 
     <!-- HERO SECTION versi vidio -->
@@ -327,7 +328,7 @@
         <div class="overlay"></div>
 
         <div class="hero-content">
-            <h1>Selamat Datang di {{ $datas->nama_yayasan }}</h1>
+            <h1>Selamat Datang di <br>{{ $datas->nama_yayasan }}</h1>
             <p>Membangun generasi unggul melalui pendidikan berkualitas dan karakter mulia.</p>
             {{-- <a href="#program" class="btn btn-lg">Lihat Program Kami</a> --}}
         </div>
@@ -337,8 +338,9 @@
         <div class="custom-shape-divider-bottom-hero">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.77-17.35-168.26-13.21-250.45,3.84
-                                                 C406.34,36.47,327.41,67.17,246.65,84.69c-89,19.12-175.47,19.9-261.64-1.54V120H1200V95.8
-                                                C1132.19,109.07,1058.76,111.13,985.66,92.83Z" fill="#fff"></path>
+                                                         C406.34,36.47,327.41,67.17,246.65,84.69c-89,19.12-175.47,19.9-261.64-1.54V120H1200V95.8
+                                                        C1132.19,109.07,1058.76,111.13,985.66,92.83Z" fill="#fff">
+                </path>
             </svg>
         </div>
     </section>
@@ -348,53 +350,94 @@
 
     <!-- ======= Berita Section ======= -->
     <!-- ======= Berita Section ======= -->
-    <section id="berita" class="py-5" style="background-color: #fff;">
-        <div class="container text-center mb-4" data-aos="fade-up">
+    <section id="berita" class="bg-white">
+        <div class="container text-center mb-4 pt-5" data-aos="fade-up">
             <div class="section-header">
-                <h2>Berita & Kegiatan</h2>
-                <p>Kumpulan informasi dan kegiatan terbaru dari Yayasan Cerdas Mulia.</p>
+                <h2 class="fw-bold">Berita & Kegiatan</h2>
+                <p class="text-muted">Kumpulan informasi dan kegiatan terbaru dari {{$datas->nama_yayasan}}</p>
             </div>
         </div>
 
-        <div id="beritaCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
-            <div class="carousel-inner">
+        <div id="beritaCarousel" class="carousel slide carousel-fade shadow-lg rounded-0 overflow-hidden"
+            data-bs-ride="carousel" data-bs-interval="5000">
 
+            <!-- 🔴 Indikator titik -->
+            <div class="carousel-indicators mb-4">
+                @foreach ($beritas->take(5) as $index => $berita)
+                    <button type="button" data-bs-target="#beritaCarousel" data-bs-slide-to="{{ $index }}"
+                        class="{{ $index === 0 ? 'active' : '' }}" aria-current="{{ $index === 0 ? 'true' : 'false' }}"
+                        aria-label="Slide {{ $index + 1 }}">
+                    </button>
+                @endforeach
+            </div>
+
+            <!-- 🖼️ Gambar carousel -->
+            <div class="carousel-inner" style="height: 100vh;">
                 @foreach ($beritas->take(5) as $index => $berita)
                     <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
-                        <div class="position-relative">
-                            <!-- Gambar full -->
-                            <img src="{{ asset('storage/' . $berita->thumbnail) }}" class="d-block w-100"
-                                alt="{{ $berita->judul_berita }}" style="height: 500px; object-fit: cover;">
+                        <div class="position-relative" style="height: 100vh;">
+                            <img src="{{ asset('storage/' . $berita->thumbnail) }}" class="d-block w-100 h-100"
+                                alt="{{ $berita->judul_berita }}" style="object-fit: cover; filter: brightness(70%);">
 
-                            <!-- Overlay -->
-                            <div class="carousel-caption d-flex flex-column justify-content-center align-items-start text-start"
-                                style="padding: 40px;">
-                                <h2 class="fw-bold text-black">{{ $berita->judul_berita }}</h2>
-                                {{-- <p class="text-black">{{ Str::limit($berita->content, 150, '...') }}</p> --}}
-                                <div class="button-container">
-
-                                    <a href="{{ route('berita.show', $berita->slug) }}"
-                                        class="btn btn-danger mt-2 px-4 py-2 fw-semibold"
-                                        style="background-color:black; border:none; color:white; ">Baca Selengkapnya</a>
-                                </div>
+                            <!-- Overlay teks -->
+                            <div class="carousel-caption d-flex flex-column justify-content-end align-items-end text-end p-5"
+                                style="bottom: 80px; right: 50px;">
+                                <h2 class="fw-bold text-white mb-3 animate__animated animate__fadeInUp"
+                                    style="text-shadow: 2px 2px 6px rgba(0,0,0,0.7); font-size: 2.5rem;">
+                                    {{ $berita->judul_berita }}
+                                </h2>
+                                <a href="{{ route('berita.show', $berita->slug) }}"
+                                    class="btn btn-danger px-4 py-2 fw-semibold shadow-sm"
+                                    style="border: none; border-radius: 30px; background-color: #e63946;">
+                                    Baca Selengkapnya
+                                </a>
                             </div>
                         </div>
                     </div>
                 @endforeach
-
             </div>
 
-            <!-- Kontrol kiri-kanan -->
+            <!-- ⬅️➡️ Tombol kontrol -->
             <button class="carousel-control-prev" type="button" data-bs-target="#beritaCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="carousel-control-prev-icon bg-dark rounded-circle p-3 opacity-75" aria-hidden="true"></span>
                 <span class="visually-hidden">Sebelumnya</span>
             </button>
+
             <button class="carousel-control-next" type="button" data-bs-target="#beritaCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="carousel-control-next-icon bg-dark rounded-circle p-3 opacity-75" aria-hidden="true"></span>
                 <span class="visually-hidden">Selanjutnya</span>
             </button>
         </div>
     </section>
+
+    <!-- 🔧 CSS Kustom -->
+    <style>
+        /* Warna & bentuk indikator */
+        .carousel-indicators [data-bs-target] {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #727272;
+            /* Merah */
+            opacity: 0.4;
+            transition: all 0.3s ease;
+        }
+
+        /* Aktif = titik terang */
+        .carousel-indicators .active {
+            opacity: 1;
+            background-color: #e63946;
+            transform: scale(1.3);
+        }
+
+        /* Sedikit jarak antar titik */
+        .carousel-indicators {
+            gap: 8px;
+        }
+    </style>
+
+
+
     <!-- End Berita Section -->
 
 
@@ -417,7 +460,7 @@
         <div class="container text-center" data-aos="fade-up">
             <h2 class="fw-bold  mb-3" style="color: #f1f1f1">Program & Unit Pendidikan</h2>
             <p class=" mb-5" style="color: #f1f1f1">
-                Yayasan Cerdas Mulia menaungi berbagai jenjang pendidikan untuk membentuk generasi berkarakter, cerdas, dan
+                {{$datas->nama_yayasan}} menaungi berbagai jenjang pendidikan untuk membentuk generasi berkarakter, cerdas, dan
                 mandiri.
             </p>
 
