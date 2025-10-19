@@ -11,10 +11,18 @@ class news extends Model
 {
     protected $fillable = ['judul_berita', 'slug', 'content', 'thumbnail', 'published_at'];
 
-    public function getFormattedDateAttribute() {
+    public function getFormattedDateAttribute()
+    {
         Carbon::setLocale('id');
         return Carbon::parse($this->published_at)->translatedFormat('d F Y,H:i');
     }
+
+   public function getThumbnailUrlAttribute(): ?string
+{
+    return $this->thumbnail ? asset('storage/' . $this->thumbnail) : null;
+}
+
+
 
 
     // Generate slug otomatis dari title

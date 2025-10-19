@@ -7,6 +7,7 @@ use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Schemas\Schema;
+use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
 
 class NewsForm
 {
@@ -23,10 +24,14 @@ class NewsForm
                     ->required()
                     ->columnSpanFull(),
                 FileUpload::make('thumbnail')
+                    ->label('Gambar')
                     ->image()
-                    ->directory('news')
-                    ->disk('public')
-                    ->visibility('public')
+                    ->disk('public') // gunakan disk public
+                    ->directory('news') // folder di storage/app/public
+                    ->visibility('public') // pastikan bisa diakses
+                    ->imageEditor() // opsional: aktifkan editor bawaan Filament
+                    ->downloadable() // tampilkan tombol download
+                    ->openable() // tampilkan tombol open image
                     ->required(),
                 DateTimePicker::make('published_at')
                     ->required(),

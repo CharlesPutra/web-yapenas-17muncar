@@ -17,9 +17,12 @@ class ProfileForm
                     ->required(),
                 FileUpload::make('image')
                     ->image()
-                    ->directory('profile')
-                    ->disk('public')
-                    ->visibility('public')
+                    ->disk('public') // gunakan disk public
+                    ->directory('profile') // folder di storage/app/public
+                    ->visibility('public') // pastikan bisa diakses
+                    ->imageEditor() // opsional: aktifkan editor bawaan Filament
+                    ->downloadable() // tampilkan tombol download
+                    ->openable() // tampilkan tombol open image
                     ->required(),
                 TextInput::make('motto')
                     ->required(),

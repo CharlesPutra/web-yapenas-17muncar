@@ -17,10 +17,13 @@ class StructureOrganizationForm
                 TextInput::make('posisi')
                     ->required(),
                 FileUpload::make('image')
-                    ->image()
-                    ->directory('structure')
-                    ->disk('public')
-                    ->visibility('public')
+                  ->image()
+                    ->disk('public') // gunakan disk public
+                    ->directory('structure') // folder di storage/app/public
+                    ->visibility('public') // pastikan bisa diakses
+                    ->imageEditor() // opsional: aktifkan editor bawaan Filament
+                    ->downloadable() // tampilkan tombol download
+                    ->openable() // tampilkan tombol open image
                     ->required(),
                 TextInput::make('contact')
                     ->required(),
