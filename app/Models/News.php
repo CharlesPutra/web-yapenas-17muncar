@@ -17,11 +17,7 @@ class news extends Model
         return Carbon::parse($this->published_at)->translatedFormat('d F Y,H:i');
     }
 
-   public function getThumbnailUrlAttribute(): ?string
-{
-    return $this->thumbnail ? asset('storage/' . $this->thumbnail) : null;
-}
-
+  
 
 
 
