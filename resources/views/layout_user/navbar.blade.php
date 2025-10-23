@@ -19,147 +19,206 @@
 
     <style>
         :root {
-            --main-red: #d62828;
-            --text-dark: #333;
-        }
+    --main-red: #d62828;
+    --text-dark: #333;
+}
 
-        body {
-            background-color: #f8f9fa;
-            font-family: 'Poppins', sans-serif;
-        }
+body {
+    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+}
 
-        /* Navbar dasar */
-        .navbar {
-            background-color: #fff;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            font-weight: 500;
-            padding: 0.8rem 1rem;
-        }
+/* === NAVBAR DASAR === */
+.navbar {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  font-weight: 500;
+  padding: 0.8rem 1rem;
+  position: relative;
+  overflow: visible !important;
+}
 
-        .navbar-brand {
-            color: var(--main-red);
-            font-weight: 700;
-            font-size: 1.4rem;
-            letter-spacing: 0.5px;
-        }
+/* Ornamen bendera di dalam navbar */
+.navbar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #d62828 0%, #ffffff 50%, #d62828 100%);
+  opacity: 0.15;
+  z-index: 1;
+}
 
-        .navbar-brand:hover {
-            color: var(--main-red);
-        }
+/* Hilangkan gelombang (wave) sepenuhnya */
+.navbar::after {
+  display: none;
+}
 
-        .navbar-nav .nav-link {
-            color: var(--text-dark);
-            position: relative;
-            transition: all 0.3s ease;
-            padding: 8px 15px;
-        }
+/* Pastikan isi navbar di atas ornamen */
+.navbar * {
+  position: relative;
+  z-index: 10;
+}
 
-        .navbar-nav .nav-link:hover {
-            color: var(--main-red);
-        }
+/* Dropdown tetap muncul di atas ornamen */
+.dropdown-menu {
+  z-index: 20 !important;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
 
-        /* Garis bawah hanya untuk link biasa (bukan dropdown) */
-        .navbar-nav .nav-link:not(.dropdown-toggle)::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0%;
-            height: 2px;
-            background-color: var(--main-red);
-            transition: width 0.3s ease;
-        }
 
-        .navbar-nav .nav-link:not(.dropdown-toggle):hover::after {
-            width: 100%;
-        }
 
-        /* Dropdown styling */
-        .dropdown-menu {
-            border-radius: 10px;
-            border: none;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            padding: 0.5rem;
-        }
 
-        .dropdown-item {
-            border-radius: 6px;
-            transition: all 0.2s ease;
-        }
+/* Logo & Nama */
+.navbar-brand {
+    color: var(--main-red);
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+}
 
-        .dropdown-item:hover {
-            background-color: var(--main-red);
-            color: #fff;
-        }
+.navbar-brand:hover {
+    color: var(--main-red);
+}
 
-        /* Sosial media icon */
-        .social-icons a {
-            color: var(--text-dark);
-            font-size: 1.25rem;
-            margin-left: 15px;
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
+/* Teks di samping logo */
+#navha {
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--main-red);
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+}
 
-        .social-icons a:hover {
-            color: var(--main-red);
-            transform: translateY(-3px);
-        }
+/* Link Navbar */
+.navbar-nav .nav-link {
+    color: var(--text-dark);
+    position: relative;
+    transition: all 0.3s ease;
+    padding: 8px 15px;
+    font-weight: 500;
+}
 
-        /* Garis pembatas vertikal */
-        .divider-vertical {
-            width: 2px;
-            height: 24px;
-            background-color: #ccc;
-            opacity: 0.7;
-            border-radius: 2px;
-        }
+.navbar-nav .nav-link:hover {
+    color: var(--main-red);
+}
 
-        /* RESPONSIF: ubah jadi horizontal di layar kecil */
-        @media (max-width: 991.98px) {
-            .divider-vertical {
-                width: 80%;
-                height: 2px;
-                margin: 10px auto;
-            }
-        }
+/* Animasi garis bawah */
+.navbar-nav .nav-link:not(.dropdown-toggle)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--main-red);
+    transition: width 0.3s ease;
+}
 
-        /* Toggler */
-        .navbar-toggler {
-            border-color: var(--main-red);
-        }
+.navbar-nav .nav-link:not(.dropdown-toggle):hover::after {
+    width: 100%;
+}
 
-        .navbar-toggler-icon {
-            background-image: url({{ asset('img/LOGO YAPENAS.png') }});
-        }
+/* Dropdown */
+.dropdown-menu {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+}
 
-        .social-link {
-            transition: transform 0.3s, color 0.3s;
-        }
+.dropdown-item {
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
 
-        .social-link:hover {
-            color: #ffebee;
-            transform: scale(1.2);
-        }
+.dropdown-item:hover {
+    background-color: var(--main-red);
+    color: #fff;
+}
 
-        @media (max-width: 768px) {
-            footer .card iframe {
-                height: 150px;
-            }
-        }
+/* Submenu */
+.dropdown-submenu {
+    position: relative;
+}
 
-        section {
-            min-height: 70vh;
-            /* jaga jarak supaya footer tetap di bawah */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -5px;
+    margin-left: 0;
+    border-radius: 10px;
+    display: none;
+    position: absolute;
+}
 
-        @media (max-width: 768px) {
-            #navha {
-                font-size: 14px
-            }
-        }
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu>a::after {
+    content: "▶";
+    float: right;
+    margin-top: 4px;
+    font-size: 0.7rem;
+}
+
+/* Divider */
+.divider-vertical {
+    width: 2px;
+    height: 24px;
+    background-color: #ccc;
+    opacity: 0.7;
+    border-radius: 2px;
+}
+
+/* Sosial Media Icon */
+.social-icons a {
+    color: var(--text-dark);
+    font-size: 1.25rem;
+    margin-left: 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--main-red);
+    transform: translateY(-3px);
+}
+
+/* Responsif Divider */
+@media (max-width: 991.98px) {
+    .divider-vertical {
+        width: 80%;
+        height: 2px;
+        margin: 10px auto;
+    }
+}
+
+/* Toggler */
+.navbar-toggler {
+    border-color: var(--main-red);
+}
+
+.social-link {
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-link:hover {
+    color: #ffebee;
+    transform: scale(1.2);
+}
+
+/* Responsif Logo */
+@media (max-width: 768px) {
+    #navha {
+        font-size: 13px;
+    }
+
+    .navbar-brand img {
+        height: 80px;
+    }
+}
+
     </style>
 </head>
 
@@ -169,9 +228,10 @@
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="#">
                 <img src="{{ asset('img/LOGO YAPENAS.png') }}" alt="Logo YAPENAS" class="me-2"
-                    style="height: 80px; width: auto; object-fit: contain;">
-                <h5 class="mb-0 fw-semibold text-danger" id="navha">YAPENAS 17 AGUSTUS 1945</h5>
+                    style="height: 100px; width: auto; object-fit: contain;">
             </a>
+            <h5 class="mb-0 fw-semibold text-danger" id="navha">YAPENAS 17 AGUSTUS 1945 <br> KABUPATEN BANYUWANGI
+            </h5>
 
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -179,9 +239,41 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav" style="font-size: 17px">
                 <ul class="navbar-nav gap-2">
                     <li class="nav-item"><a class="nav-link " href="{{ route('home') }}">Beranda</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="unitDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Unit
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="unitDropdown">
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle">TK</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">TK SIWI PENI MUNCAR</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- SMP dropdown -->
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle">SMP</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">SMP 17 AGUSTUS 1945-1 MUNCAR</a></li>
+                                    <li><a class="dropdown-item" href="#">SMP 17 AGUSTUS 1945-2 MUNCAR</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- SMK dropdown -->
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle">SMK</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">SMK 17 AGUSTUS 1945 MUNCAR</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="programDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -194,17 +286,7 @@
                                     Organisasi</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="programDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Unit
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="programDropdown">
-                            <li><a class="dropdown-item" href="#">TK</a></li>
-                            <li><a class="dropdown-item" href="#">SMP</a></li>
-                            <li><a class="dropdown-item" href="#">SMK</a></li>
-                        </ul>
-                    </li>
+
                     <li class="nav-item"><a class="nav-link" href="{{ route('berita') }}">Berita</a></li>
                 </ul>
 
@@ -265,7 +347,8 @@
             <hr class="mt-4 mb-3 text-white opacity-50">
 
             <div class="text-center small">
-                <p class="mb-0">&copy; {{ date('Y') }} <strong>YAPENAS 17 AGUSTUS 1945</strong>. All rights reserved.</p>
+                <p class="mb-0">&copy; {{ date('Y') }} <strong>YAPENAS 17 AGUSTUS 1945</strong>. All rights
+                    reserved.</p>
             </div>
         </div>
     </footer>
@@ -279,6 +362,17 @@
         AOS.init({
             duration: 1000,
             once: true
+        });
+
+        // Agar submenu bisa diklik di mobile
+        document.querySelectorAll('.dropdown-submenu > a').forEach(function(element) {
+            element.addEventListener('click', function(e) {
+                let nextEl = this.nextElementSibling;
+                if (nextEl && nextEl.classList.contains('dropdown-menu')) {
+                    e.preventDefault();
+                    nextEl.classList.toggle('show');
+                }
+            });
         });
     </script>
 </body>

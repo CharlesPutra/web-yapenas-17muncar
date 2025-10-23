@@ -4,86 +4,86 @@
     <style>
         /* versi vidio */
         /* :root {
-                                                                                                                --main-red: #d62828;
-                                                                                                                --text-light: #fff;
-                                                                                                            }
+                                                                                                                        --main-red: #d62828;
+                                                                                                                        --text-light: #fff;
+                                                                                                                    }
 
-                                                                                                            body {
-                                                                                                                margin: 0;
-                                                                                                                padding: 0;
-                                                                                                                background-color: #f8f9fa;
-                                                                                                                overflow-x: hidden;
-                                                                                                            }
+                                                                                                                    body {
+                                                                                                                        margin: 0;
+                                                                                                                        padding: 0;
+                                                                                                                        background-color: #f8f9fa;
+                                                                                                                        overflow-x: hidden;
+                                                                                                                    }
 
-                                                                                                            Hero Section
-                                                                                                            .hero-section {
-                                                                                                                position: relative;
-                                                                                                                width: 100%;
-                                                                                                                height: 100vh;
-                                                                                                                overflow: hidden;
-                                                                                                                display: flex;
-                                                                                                                align-items: center;
-                                                                                                                justify-content: center;
-                                                                                                                color: var(--text-light);
-                                                                                                            }
+                                                                                                                    Hero Section
+                                                                                                                    .hero-section {
+                                                                                                                        position: relative;
+                                                                                                                        width: 100%;
+                                                                                                                        height: 100vh;
+                                                                                                                        overflow: hidden;
+                                                                                                                        display: flex;
+                                                                                                                        align-items: center;
+                                                                                                                        justify-content: center;
+                                                                                                                        color: var(--text-light);
+                                                                                                                    }
 
-                                                                                                            .hero-section video {
-                                                                                                                position: absolute;
-                                                                                                                top: 0;
-                                                                                                                left: 0;
-                                                                                                                width: 100%;
-                                                                                                                height: 100%;
-                                                                                                                object-fit: cover;
-                                                                                                                z-index: -1;
-                                                                                                                filter: brightness(65%);
-                                                                                                            }
+                                                                                                                    .hero-section video {
+                                                                                                                        position: absolute;
+                                                                                                                        top: 0;
+                                                                                                                        left: 0;
+                                                                                                                        width: 100%;
+                                                                                                                        height: 100%;
+                                                                                                                        object-fit: cover;
+                                                                                                                        z-index: -1;
+                                                                                                                        filter: brightness(65%);
+                                                                                                                    }
 
-                                                                                                            .hero-content {
-                                                                                                                text-align: center;
-                                                                                                                z-index: 2;
-                                                                                                                max-width: 700px;
-                                                                                                                padding: 20px;
-                                                                                                            }
+                                                                                                                    .hero-content {
+                                                                                                                        text-align: center;
+                                                                                                                        z-index: 2;
+                                                                                                                        max-width: 700px;
+                                                                                                                        padding: 20px;
+                                                                                                                    }
 
-                                                                                                            .hero-content h1 {
-                                                                                                                font-size: 3rem;
-                                                                                                                font-weight: 700;
-                                                                                                                color: #fff;
-                                                                                                                text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
-                                                                                                            }
+                                                                                                                    .hero-content h1 {
+                                                                                                                        font-size: 3rem;
+                                                                                                                        font-weight: 700;
+                                                                                                                        color: #fff;
+                                                                                                                        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+                                                                                                                    }
 
-                                                                                                            .hero-content p {
-                                                                                                                font-size: 1.2rem;
-                                                                                                                margin-top: 15px;
-                                                                                                                color: #f1f1f1;
-                                                                                                                text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
-                                                                                                            }
+                                                                                                                    .hero-content p {
+                                                                                                                        font-size: 1.2rem;
+                                                                                                                        margin-top: 15px;
+                                                                                                                        color: #f1f1f1;
+                                                                                                                        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+                                                                                                                    }
 
-                                                                                                            .hero-content .btn {
-                                                                                                                margin-top: 25px;
-                                                                                                                background-color: var(--main-red);
-                                                                                                                color: #fff;
-                                                                                                                border-radius: 30px;
-                                                                                                                padding: 10px 25px;
-                                                                                                                font-weight: 600;
-                                                                                                                transition: all 0.3s ease;
-                                                                                                            }
+                                                                                                                    .hero-content .btn {
+                                                                                                                        margin-top: 25px;
+                                                                                                                        background-color: var(--main-red);
+                                                                                                                        color: #fff;
+                                                                                                                        border-radius: 30px;
+                                                                                                                        padding: 10px 25px;
+                                                                                                                        font-weight: 600;
+                                                                                                                        transition: all 0.3s ease;
+                                                                                                                    }
 
-                                                                                                            .hero-content .btn:hover {
-                                                                                                                background-color: #b71c1c;
-                                                                                                                transform: translateY(-3px);
-                                                                                                            }
+                                                                                                                    .hero-content .btn:hover {
+                                                                                                                        background-color: #b71c1c;
+                                                                                                                        transform: translateY(-3px);
+                                                                                                                    }
 
-                                                                                                            Responsif
-                                                                                                            @media (max-width: 768px) {
-                                                                                                                .hero-content h1 {
-                                                                                                                    font-size: 2.2rem;
-                                                                                                                }
+                                                                                                                    Responsif
+                                                                                                                    @media (max-width: 768px) {
+                                                                                                                        .hero-content h1 {
+                                                                                                                            font-size: 2.2rem;
+                                                                                                                        }
 
-                                                                                                                .hero-content p {
-                                                                                                                    font-size: 1rem;
-                                                                                                                }
-                                                                                                            } */
+                                                                                                                        .hero-content p {
+                                                                                                                            font-size: 1rem;
+                                                                                                                        }
+                                                                                                                    } */
         /* versi vidio end */
 
         /* versi yt */
@@ -136,52 +136,55 @@
             z-index: 0;
         }
 
-        .hero-content {
-            text-align: center;
-            z-index: 2;
-            max-width: 700px;
-            padding: 20px;
-            top: 10% !important;
-            /* geser teks ke atas */
-            transform: translate(-50%, 0) !important;
-            /* hapus efek tengah vertikal */
-            position: absolute;
-            left: 50%;
-        }
+       .hero-content {
+  text-align: center;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px; /* tambah lebar agar tidak turun */
+  padding: 20px;
+}
 
-        .hero-content h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            color: #fff;
-            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
-        }
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1.3;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-        .hero-content p {
-            font-size: 1.2rem;
-            margin-top: 15px;
-            color: #f1f1f1;
-        }
+.hero-content h1 .merah {
+  color: #e60000;
+  text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.8);
+}
 
-        .hero-content .btn {
-            margin-top: 25px;
-            background-color: var(--main-red);
-            color: #fff;
-            border-radius: 30px;
-            padding: 10px 25px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
+.hero-content p {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  color: #f1f1f1;
+}
 
-        .hero-content .btn:hover {
-            background-color: #b71c1c;
-            transform: translateY(-3px);
-        }
 
-        @media (max-width: 768px) {
-            .hero-content h1 {
-                font-size: 2.2rem;
-            }
-        }
+
+      @media (max-width: 768px) {
+  .hero-content {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+}
+
 
         @media (max-width: 768px) {
             .video-bg iframe {
@@ -329,19 +332,25 @@
 
         <div class="overlay"></div>
 
-        <div class="hero-content">
-            <h1>SELAMAT DATANG <br>YAYASAN PENDIDIKAN NASIONAL <br> (YAPENAS) <br> 17 AGUSTUS 1945 KABUPATEN BANYUWANGI</h1>
-            <p>Membangun generasi unggul melalui pendidikan berkualitas dan karakter mulia.</p>
-            {{-- <a href="#program" class="btn btn-lg">Lihat Program Kami</a> --}}
-        </div>
+       <div class="hero-content">
+  <h1>
+    SELAMAT DATANG<br>
+    <span class="merah">YAYASAN PENDIDIKAN NASIONAL <br>(YAPENAS)</span>
+    <span class="merah">17 AGUSTUS 1945 KABUPATEN BANYUWANGI</span>
+  </h1>
+  <p>{{$datas->motto}}</p>
+</div>
+
+
+
 
 
         <!-- Pembatas Wave -->
         <div class="custom-shape-divider-bottom-hero">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.77-17.35-168.26-13.21-250.45,3.84
-                                                                 C406.34,36.47,327.41,67.17,246.65,84.69c-89,19.12-175.47,19.9-261.64-1.54V120H1200V95.8
-                                                                C1132.19,109.07,1058.76,111.13,985.66,92.83Z"
+                                                                         C406.34,36.47,327.41,67.17,246.65,84.69c-89,19.12-175.47,19.9-261.64-1.54V120H1200V95.8
+                                                                        C1132.19,109.07,1058.76,111.13,985.66,92.83Z"
                     fill="#fff">
                 </path>
             </svg>
