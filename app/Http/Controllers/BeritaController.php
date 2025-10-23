@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class BeritaController extends Controller
 {
     public function berita() {
-        $datas = news::orderBy('published_at', 'desc')->paginate(1);
+        $datas = news::orderBy('published_at', 'desc')->paginate(3);
         return view('berita',compact('datas'));
     }
 

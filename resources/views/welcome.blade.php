@@ -330,7 +330,7 @@
         <div class="overlay"></div>
 
         <div class="hero-content">
-            <h1>Selamat Datang di <br>{{ $datas->nama_yayasan }}</h1>
+            <h1>SELAMAT DATANG <br>YAYASAN PENDIDIKAN NASIONAL <br> (YAPENAS) <br> 17 AGUSTUS 1945 KABUPATEN BANYUWANGI</h1>
             <p>Membangun generasi unggul melalui pendidikan berkualitas dan karakter mulia.</p>
             {{-- <a href="#program" class="btn btn-lg">Lihat Program Kami</a> --}}
         </div>
