@@ -19,206 +19,247 @@
 
     <style>
         :root {
-    --main-red: #d62828;
-    --text-dark: #333;
-}
+            --main-red: #d62828;
+            --text-dark: #333;
+        }
 
-body {
-    background-color: #f8f9fa;
-    font-family: 'Poppins', sans-serif;
-}
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Poppins', sans-serif;
+        }
 
-/* === NAVBAR DASAR === */
-.navbar {
-  background-color: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  font-weight: 500;
-  padding: 0.8rem 1rem;
-  position: relative;
-  overflow: visible !important;
-}
+        /* === NAVBAR DASAR === */
+        .navbar {
+            background-color: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            font-weight: 500;
+            padding: 0.8rem 1rem;
+            position: relative;
+            overflow: visible !important;
+        }
 
-/* Ornamen bendera di dalam navbar */
-.navbar::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, #d62828 0%, #ffffff 50%, #d62828 100%);
-  opacity: 0.15;
-  z-index: 1;
-}
+        /* Ornamen bendera di dalam navbar */
+        .navbar::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, #d62828 0%, #ffffff 50%, #d62828 100%);
+            opacity: 0.15;
+            z-index: 1;
+        }
 
-/* Hilangkan gelombang (wave) sepenuhnya */
-.navbar::after {
-  display: none;
-}
+        /* Hilangkan gelombang (wave) sepenuhnya */
+        .navbar::after {
+            display: none;
+        }
 
-/* Pastikan isi navbar di atas ornamen */
-.navbar * {
-  position: relative;
-  z-index: 10;
-}
+        /* Pastikan isi navbar di atas ornamen */
+        .navbar * {
+            position: relative;
+            z-index: 10;
+        }
 
-/* Dropdown tetap muncul di atas ornamen */
-.dropdown-menu {
-  z-index: 20 !important;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-}
-
-
+        /* Dropdown tetap muncul di atas ornamen */
+        .dropdown-menu {
+            z-index: 20 !important;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
 
 
-/* Logo & Nama */
-.navbar-brand {
-    color: var(--main-red);
-    font-weight: 700;
-    font-size: 1.4rem;
-    letter-spacing: 0.5px;
-}
 
-.navbar-brand:hover {
-    color: var(--main-red);
-}
 
-/* Teks di samping logo */
-#navha {
-    font-size: 1.05rem;
-    font-weight: 600;
-    line-height: 1.4;
-    color: var(--main-red);
-    text-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
-}
+        /* Logo & Nama */
+        .navbar-brand {
+            color: var(--main-red);
+            font-weight: 700;
+            font-size: 1.4rem;
+            letter-spacing: 0.5px;
+        }
 
-/* Link Navbar */
-.navbar-nav .nav-link {
-    color: var(--text-dark);
-    position: relative;
-    transition: all 0.3s ease;
-    padding: 8px 15px;
-    font-weight: 500;
-}
+        .navbar-brand:hover {
+            color: var(--main-red);
+        }
 
-.navbar-nav .nav-link:hover {
-    color: var(--main-red);
-}
+        /* Teks di samping logo */
+        #navha {
+            font-size: 1.05rem;
+            font-weight: 600;
+            line-height: 1.4;
+            color: var(--main-red);
+            text-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+        }
 
-/* Animasi garis bawah */
-.navbar-nav .nav-link:not(.dropdown-toggle)::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0%;
-    height: 2px;
-    background-color: var(--main-red);
-    transition: width 0.3s ease;
-}
+        /* Link Navbar */
+        .navbar-nav .nav-link {
+            color: var(--text-dark);
+            position: relative;
+            transition: all 0.3s ease;
+            padding: 8px 15px;
+            font-weight: 500;
+        }
 
-.navbar-nav .nav-link:not(.dropdown-toggle):hover::after {
-    width: 100%;
-}
+        .navbar-nav .nav-link:hover {
+            color: var(--main-red);
+        }
 
-/* Dropdown */
-.dropdown-menu {
-    border-radius: 10px;
-    border: none;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 0.5rem;
-}
+        /* Animasi garis bawah */
+        .navbar-nav .nav-link:not(.dropdown-toggle)::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background-color: var(--main-red);
+            transition: width 0.3s ease;
+        }
 
-.dropdown-item {
-    border-radius: 6px;
-    transition: all 0.2s ease;
-}
+        .navbar-nav .nav-link:not(.dropdown-toggle):hover::after {
+            width: 100%;
+        }
 
-.dropdown-item:hover {
-    background-color: var(--main-red);
-    color: #fff;
-}
+        /* Dropdown */
+        .dropdown-menu {
+            border-radius: 10px;
+            border: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 0.5rem;
+        }
 
-/* Submenu */
-.dropdown-submenu {
-    position: relative;
-}
+        .dropdown-item {
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
 
-.dropdown-submenu .dropdown-menu {
-    top: 0;
-    left: 100%;
-    margin-top: -5px;
-    margin-left: 0;
-    border-radius: 10px;
-    display: none;
-    position: absolute;
-}
+        .dropdown-item:hover {
+            background-color: var(--main-red);
+            color: #fff;
+        }
 
-.dropdown-submenu:hover>.dropdown-menu {
-    display: block;
-}
+        /* Submenu */
+        .dropdown-submenu {
+            position: relative;
+        }
 
-.dropdown-submenu>a::after {
-    content: "▶";
-    float: right;
-    margin-top: 4px;
-    font-size: 0.7rem;
-}
+        .dropdown-submenu .dropdown-menu {
+            top: 0;
+            left: 100%;
+            margin-top: -5px;
+            margin-left: 0;
+            border-radius: 10px;
+            display: none;
+            position: absolute;
+        }
 
-/* Divider */
-.divider-vertical {
-    width: 2px;
-    height: 24px;
-    background-color: #ccc;
-    opacity: 0.7;
-    border-radius: 2px;
-}
+        .dropdown-submenu:hover>.dropdown-menu {
+            display: block;
+        }
 
-/* Sosial Media Icon */
-.social-icons a {
-    color: var(--text-dark);
-    font-size: 1.25rem;
-    margin-left: 15px;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
+        .dropdown-submenu>a::after {
+            content: "▶";
+            float: right;
+            margin-top: 4px;
+            font-size: 0.7rem;
+        }
 
-.social-icons a:hover {
-    color: var(--main-red);
-    transform: translateY(-3px);
-}
+        /* Divider */
+        .divider-vertical {
+            width: 2px;
+            height: 24px;
+            background-color: #ccc;
+            opacity: 0.7;
+            border-radius: 2px;
+        }
 
-/* Responsif Divider */
-@media (max-width: 991.98px) {
-    .divider-vertical {
-        width: 80%;
-        height: 2px;
-        margin: 10px auto;
-    }
-}
+        /* Sosial Media Icon */
+        .social-icons a {
+            color: var(--text-dark);
+            font-size: 1.25rem;
+            margin-left: 15px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
 
-/* Toggler */
-.navbar-toggler {
-    border-color: var(--main-red);
-}
+        .social-icons a:hover {
+            color: var(--main-red);
+            transform: translateY(-3px);
+        }
 
-.social-link {
-    transition: transform 0.3s, color 0.3s;
-}
+        /* Responsif Divider */
+        @media (max-width: 991.98px) {
+            .divider-vertical {
+                width: 80%;
+                height: 2px;
+                margin: 10px auto;
+            }
+        }
 
-.social-link:hover {
-    color: #ffebee;
-    transform: scale(1.2);
-}
+        /* Toggler */
+        .navbar-toggler {
+            border-color: var(--main-red);
+        }
 
-/* Responsif Logo */
-@media (max-width: 768px) {
-    #navha {
-        font-size: 13px;
-    }
+        .social-link {
+            transition: transform 0.3s, color 0.3s;
+        }
 
-    .navbar-brand img {
-        height: 80px;
-    }
-}
+        .social-link:hover {
+            color: #ffebee;
+            transform: scale(1.2);
+        }
 
+        /* Responsif Logo */
+        @media (max-width: 768px) {
+            #navha {
+                font-size: 13px;
+            }
+
+            .navbar-brand img {
+                height: 80px;
+            }
+        }
+
+
+        .flag-wave {
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            position: relative;
+            z-index: 1;
+            margin-top: -2px;
+            /* biar nyatu rapet sama navbar */
+        }
+
+        .flag-wave svg {
+            display: block;
+            width: 100%;
+            height: 60px;
+            /* tinggi gelombang, bisa ubah misal 50px */
+        }
+
+        .red-wave {
+            fill: #d62828;
+            animation: waveMove 6s ease-in-out infinite alternate;
+        }
+
+        .white-wave {
+            fill: #ffffff;
+            animation: waveMove 6s ease-in-out infinite alternate-reverse;
+        }
+
+        @keyframes waveMove {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(5px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 
@@ -303,6 +344,16 @@ body {
             </div>
         </div>
     </nav>
+
+    <!-- Ornamen bendera merah putih halus -->
+    <div class="flag-wave">
+        <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <path class="red-wave" d="M0,40 C360,90 1080,-10 1440,40 L1440,0 L0,0 Z"></path>
+            <path class="white-wave" d="M0,50 C360,100 1080,0 1440,50 L1440,100 L0,100 Z"></path>
+        </svg>
+    </div>
+
+
 
     <main>
         @yield('navbar')

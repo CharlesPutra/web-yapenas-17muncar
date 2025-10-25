@@ -23,6 +23,8 @@ class NewsForm
                 Textarea::make('content')
                     ->required()
                     ->columnSpanFull(),
+                TextInput::make('link_yt')
+                    ->required(),
                 FileUpload::make('thumbnail')
                     ->label('Gambar')
                     ->image()

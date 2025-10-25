@@ -47,6 +47,12 @@
             font-weight: 600;
             margin-top: 10px;
         }
+
+        .news-banner iframe {
+            width: 100%;
+            height: 400px;
+            border-radius: 12px;
+        }
     </style>
 
     <section class="py-5" style="background-color: #f8f9fa;">
@@ -56,9 +62,7 @@
 
                     <!-- Thumbnail / Banner -->
                     <div class="news-banner mb-4 position-relative">
-                        <img src="{{ asset('storage/' . $berita->thumbnail) }}" class="img-fluid rounded shadow-sm w-100"
-                            alt="{{ $berita->judul_berita }}" style="max-height: 450px; object-fit: cover;">
-
+                        <iframe width="100%" height="400" src="{{ $berita->link_yt }}" allowfullscreen></iframe>
                         <!-- Tanggal publikasi -->
                         <span class="badge bg-danger position-absolute top-0 start-0 m-3 px-3 py-2 shadow">
                             {{ $berita->formatted_date }}

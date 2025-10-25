@@ -9,7 +9,7 @@ use Illuminate\Support\Str;
 
 class news extends Model
 {
-    protected $fillable = ['judul_berita', 'slug', 'content', 'thumbnail', 'published_at'];
+    protected $fillable = ['judul_berita', 'slug', 'content','link_yt', 'thumbnail', 'published_at'];
 
     public function getFormattedDateAttribute()
     {
@@ -17,7 +17,7 @@ class news extends Model
         return Carbon::parse($this->published_at)->translatedFormat('d F Y,H:i');
     }
 
-  
+
 
 
 
