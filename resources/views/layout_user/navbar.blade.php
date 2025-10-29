@@ -229,37 +229,6 @@
             margin-top: -2px;
             /* biar nyatu rapet sama navbar */
         }
-
-        .flag-wave svg {
-            display: block;
-            width: 100%;
-            height: 60px;
-            /* tinggi gelombang, bisa ubah misal 50px */
-        }
-
-        .red-wave {
-            fill: #d62828;
-            animation: waveMove 6s ease-in-out infinite alternate;
-        }
-
-        .white-wave {
-            fill: #ffffff;
-            animation: waveMove 6s ease-in-out infinite alternate-reverse;
-        }
-
-        @keyframes waveMove {
-            0% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(5px);
-            }
-
-            100% {
-                transform: translateY(0);
-            }
-        }
     </style>
 </head>
 
@@ -345,13 +314,7 @@
         </div>
     </nav>
 
-    <!-- Ornamen bendera merah putih halus -->
-    <div class="flag-wave">
-        <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-            <path class="red-wave" d="M0,40 C360,90 1080,-10 1440,40 L1440,0 L0,0 Z"></path>
-            <path class="white-wave" d="M0,50 C360,100 1080,0 1440,50 L1440,100 L0,100 Z"></path>
-        </svg>
-    </div>
+
 
 
 
