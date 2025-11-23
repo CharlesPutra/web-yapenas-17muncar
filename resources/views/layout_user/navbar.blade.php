@@ -30,27 +30,53 @@
 
         /* === NAVBAR DASAR === */
         .navbar {
-            background-color: #fff;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            font-weight: 500;
-            padding: 0.8rem 1rem;
             position: relative;
-            overflow: visible !important;
+            background-color: #ffffff;
+            /* isi navbar putih */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            z-index: 10;
         }
+
 
         /* Ornamen bendera di dalam navbar */
         .navbar::before {
             content: "";
             position: absolute;
-            inset: 0;
-            background: linear-gradient(90deg, #d62828 0%, #ffffff 50%, #d62828 100%);
-            opacity: 0.25;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 12px;
+            /* total tinggi 3 garis, bisa disesuaikan */
+            background: linear-gradient(to bottom,
+                    #d62828 0%,
+                    /* merah atas */
+                    #d62828 33.33%,
+                    #ffffff 33.33%,
+                    /* putih tengah */
+                    #ffffff 66.66%,
+                    #d62828 66.66%,
+                    /* merah bawah */
+                    #d62828 100%);
             z-index: 1;
         }
 
+
         /* Hilangkan gelombang (wave) sepenuhnya */
         .navbar::after {
-            display: none;
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 12px;
+            background: linear-gradient(to bottom,
+                    #d62828 0%,
+                    #d62828 33.33%,
+                    #ffffff 33.33%,
+                    #ffffff 66.66%,
+                    #d62828 66.66%,
+                    #d62828 100%);
+            z-index: 1;
         }
 
         /* Pastikan isi navbar di atas ornamen */
@@ -218,48 +244,6 @@
                 height: 80px;
             }
         }
-
-/*
-        .flag-wave {
-            width: 100%;
-            overflow: hidden;
-            line-height: 0;
-            position: relative;
-            z-index: 1;
-            margin-top: -2px;
-            biar nyatu rapet sama navbar
-        } */
-
-        /* .flag-wave svg {
-            display: block;
-            width: 100%;
-            height: 60px;
-            tinggi gelombang, bisa ubah misal 50px
-        }
-
-        .red-wave {
-            fill: #d62828;
-            animation: waveMove 6s ease-in-out infinite alternate;
-        }
-
-        .white-wave {
-            fill: #ffffff;
-            animation: waveMove 6s ease-in-out infinite alternate-reverse;
-        } */
-
-        /* @keyframes waveMove {
-            0% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(5px);
-            }
-
-            100% {
-                transform: translateY(0);
-            }
-        } */
     </style>
 </head>
 
@@ -282,9 +266,9 @@
 
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav" style="font-size: 17px">
                 <ul class="navbar-nav gap-2">
-                    <li class="nav-item"><a class="nav-link " href="{{ route('home') }}">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="{{ route('home') }}">Beranda</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="unitDropdown" role="button"
+                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="unitDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Unit
                         </a>
@@ -316,7 +300,7 @@
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="programDropdown" role="button"
+                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="programDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Profile
                         </a>
@@ -328,7 +312,7 @@
                         </ul>
                     </li>
 
-                    <li class="nav-item"><a class="nav-link" href="{{ route('berita') }}">Berita</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="{{ route('berita') }}">Berita</a></li>
                 </ul>
 
                 <!-- Garis pembatas -->
@@ -336,7 +320,7 @@
 
                 <!-- Ikon Sosial Media -->
                 <div class="social-icons d-flex align-items-center justify-content-center">
-                    <a href="#" target="_blank" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                    <a href="https://www.youtube.com/@official.yapenasbwi/videos" target="_blank" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
                     <a href="#" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
                     <a href="#" target="_blank" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
                     <a href="#" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>

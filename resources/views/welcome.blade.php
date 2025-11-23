@@ -1,6 +1,12 @@
 @extends('layout_user.navbar')
 
 @section('navbar')
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&family=Lobster&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
     <style>
         /* versi vidio */
         /* :root {
@@ -296,17 +302,17 @@
             }
         }
 
-        @import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+
 
         .judul-selamat {
-            font-family: 'Playball', cursive;
+              font-family: 'Lobster', cursive;
             font-size: 50px;
             text-align: center;
-            text-shadow:
+            /* text-shadow:
                 2px 2px 0 #fff,
-                /* garis putih di pinggir huruf */
+                garis putih di pinggir huruf
                 4px 4px 6px rgba(0, 0, 0, 0.4);
-            /* efek bayangan */
+            efek bayangan */
             margin-top: 50px;
             letter-spacing: 3px;
         }
@@ -617,7 +623,7 @@
                     </p> --}}
                     <ul class="list-unstyled mt-3">
                         @foreach ($misilist as $m)
-                            <li><i class="bi bi-check-circle-fill text-danger me-2"></i>{{ trim($m) }}</li>
+                            <li><i class="bi bi-check-circle-fill text-danger me-2"></i>{{ trim($m ?? 'tiddak ada data') }}</li>
                         @endforeach
                     </ul>
 
