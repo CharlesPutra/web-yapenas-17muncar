@@ -386,96 +386,151 @@
 
 
     <!-- ======= Berita Section ======= -->
-    <!-- ======= Berita Section ======= -->
-    <section id="berita" class="bg-white">
-        <div class="container text-center mb-4 pt-5" data-aos="fade-up">
-            <div class="section-header">
-                <h2 class="fw-bold">Berita & Kegiatan</h2>
-                <p class="text-muted">Kumpulan informasi dan kegiatan terbaru dari {{ $datas->nama_yayasan }}</p>
-            </div>
+<!-- ======= Berita Section ======= -->
+<section id="berita" class="bg-white">
+
+    <!-- Judul Section -->
+    <div class="container text-center mb-4 pt-5" data-aos="fade-up">
+        <div class="section-header">
+            <h2 class="fw-bold">Berita & Kegiatan</h2>
+            <p class="text-muted">
+                Kumpulan informasi dan kegiatan terbaru dari {{ $datas->nama_yayasan }}
+            </p>
+        </div>
+    </div>
+
+    <!-- Carousel -->
+    <div id="beritaCarousel"
+        class="carousel slide carousel-fade shadow-lg rounded-0 overflow-hidden"
+        data-bs-ride="carousel"
+        data-bs-interval="5000">
+
+        <!-- 🔴 Indikator -->
+        <div class="carousel-indicators mb-4">
+            @foreach ($beritas->take(5) as $index => $berita)
+                <button type="button"
+                    data-bs-target="#beritaCarousel"
+                    data-bs-slide-to="{{ $index }}"
+                    class="{{ $index === 0 ? 'active' : '' }}"
+                    aria-current="{{ $index === 0 ? 'true' : 'false' }}"
+                    aria-label="Slide {{ $index + 1 }}">
+                </button>
+            @endforeach
         </div>
 
-        <div id="beritaCarousel" class="carousel slide carousel-fade shadow-lg rounded-0 overflow-hidden"
-            data-bs-ride="carousel" data-bs-interval="5000">
+        <!-- 🖼️ Isi Carousel -->
+        <div class="carousel-inner berita-height">
+            @foreach ($beritas->take(5) as $index => $berita)
+                <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
+                    <div class="position-relative berita-height berita-img-wrapper">
 
-            <!-- 🔴 Indikator titik -->
-            <div class="carousel-indicators mb-4">
-                @foreach ($beritas->take(5) as $index => $berita)
-                    <button type="button" data-bs-target="#beritaCarousel" data-bs-slide-to="{{ $index }}"
-                        class="{{ $index === 0 ? 'active' : '' }}" aria-current="{{ $index === 0 ? 'true' : 'false' }}"
-                        aria-label="Slide {{ $index + 1 }}">
-                    </button>
-                @endforeach
-            </div>
+                        <!-- Gambar UTUH -->
+                        <img src="{{ asset('storage/' . $berita->thumbnail) }}"
+                            class="d-block w-100 h-100 berita-img"
+                            alt="{{ $berita->judul_berita }}">
 
-            <!-- 🖼️ Gambar carousel -->
-            <div class="carousel-inner" style="height: 100vh;">
-                @foreach ($beritas->take(5) as $index => $berita)
-                    <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
-                        <div class="position-relative" style="height: 100vh;">
-                            <img src="{{ asset('storage/' . $berita->thumbnail) }}" class="d-block w-100 h-100"
-                                alt="{{ $berita->judul_berita }}" style="object-fit: cover; filter: brightness(70%);">
+                        <!-- Overlay gelap -->
+                        <div class="berita-overlay"></div>
 
-                            <!-- Overlay teks -->
-                            <div class="carousel-caption d-flex flex-column justify-content-end align-items-end text-end p-5"
-                                style="bottom: 80px; right: 50px;">
-                                <h2 class="fw-bold text-white mb-3 animate__animated animate__fadeInUp"
-                                    style="text-shadow: 2px 2px 6px rgba(0,0,0,0.7); font-size: 2.5rem;">
-                                    {{ $berita->judul_berita }}
-                                </h2>
-                                <a href="{{ route('berita.show', $berita->slug) }}"
-                                    class="btn btn-danger px-4 py-2 fw-semibold shadow-sm"
-                                    style="border: none; border-radius: 30px; background-color: #e63946;">
-                                    Baca Selengkapnya
-                                </a>
-                            </div>
+                        <!-- Overlay teks -->
+                        <div class="carousel-caption d-flex flex-column justify-content-end align-items-end text-end p-4"
+                            style="bottom: 40px; right: 40px;">
+                            <h2 class="fw-bold text-white mb-3 animate__animated animate__fadeInUp"
+                                style="text-shadow: 2px 2px 6px rgba(0,0,0,0.7);">
+                                {{ $berita->judul_berita }}
+                            </h2>
+                            <a href="{{ route('berita.show', $berita->slug) }}"
+                                class="btn btn-danger px-4 py-2 fw-semibold shadow-sm"
+                                style="border-radius: 30px; background-color: #e63946;">
+                                Baca Selengkapnya
+                            </a>
                         </div>
+
                     </div>
-                @endforeach
-            </div>
-
-            <!-- ⬅️➡️ Tombol kontrol -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#beritaCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon bg-dark rounded-circle p-3 opacity-75" aria-hidden="true"></span>
-                <span class="visually-hidden">Sebelumnya</span>
-            </button>
-
-            <button class="carousel-control-next" type="button" data-bs-target="#beritaCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon bg-dark rounded-circle p-3 opacity-75" aria-hidden="true"></span>
-                <span class="visually-hidden">Selanjutnya</span>
-            </button>
+                </div>
+            @endforeach
         </div>
-    </section>
 
-    <!-- 🔧 CSS Kustom -->
-    <style>
-        /* Warna & bentuk indikator */
-        .carousel-indicators [data-bs-target] {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: #727272;
-            /* Merah */
-            opacity: 0.4;
-            transition: all 0.3s ease;
+        <!-- ⬅️➡️ Kontrol -->
+        <button class="carousel-control-prev" type="button"
+            data-bs-target="#beritaCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bg-dark rounded-circle p-3 opacity-75"></span>
+            <span class="visually-hidden">Sebelumnya</span>
+        </button>
+
+        <button class="carousel-control-next" type="button"
+            data-bs-target="#beritaCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon bg-dark rounded-circle p-3 opacity-75"></span>
+            <span class="visually-hidden">Selanjutnya</span>
+        </button>
+
+    </div>
+</section>
+<!-- End Berita Section -->
+
+<!-- 🔧 CSS Kustom -->
+<style>
+    /* Tinggi carousel */
+    .berita-height {
+        height: 60vh;
+        min-height: 420px;
+    }
+
+    @media (max-width: 768px) {
+        .berita-height {
+            height: 45vh;
+            min-height: 300px;
         }
 
-        /* Aktif = titik terang */
-        .carousel-indicators .active {
-            opacity: 1;
-            background-color: #e63946;
-            transform: scale(1.3);
+        .carousel-caption h2 {
+            font-size: 1.6rem;
         }
+    }
 
-        /* Sedikit jarak antar titik */
-        .carousel-indicators {
-            gap: 8px;
-        }
-    </style>
+    /* Wrapper background */
+    .berita-img-wrapper {
+        background-color: #111;
+        overflow: hidden;
+    }
 
+    /* Gambar UTUH */
+    .berita-img {
+        object-fit: contain; /* KUNCI: tidak kepotong */
+        background-color: #111;
+    }
 
+    /* Overlay gelap */
+    .berita-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.35);
+        z-index: 1;
+    }
 
-    <!-- End Berita Section -->
+    .carousel-caption {
+        z-index: 2;
+    }
+
+    /* Indikator */
+    .carousel-indicators [data-bs-target] {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #727272;
+        opacity: 0.4;
+        transition: all 0.3s ease;
+    }
+
+    .carousel-indicators .active {
+        opacity: 1;
+        background-color: #e63946;
+        transform: scale(1.3);
+    }
+
+    .carousel-indicators {
+        gap: 8px;
+    }
+</style>
 
 
     {{-- end section berita --}}
@@ -540,10 +595,11 @@
                             class="card-img-top img-fluid object-fit-contain"
                             style="height: 250px; background-color: #f8f9fa;">
                         <div class="card-body">
-                            <h5 class="fw-bold text-danger">TK SIWI PENI MUNCAR</h5>
+                            <h5 class="fw-bold text-danger">TK SIWI PENI <br> MUNCAR</h5>
                             <p class="text-secondary small">
                                 Membentuk siswa berwawasan luas, mandiri, dan memiliki semangat belajar yang tinggi.
                             </p>
+                             <a href="https://ppdb.smk17muncar.sch.id/" class="btn btn-primary">Lihat Unit</a>
                         </div>
                     </div>
                 </div>
@@ -557,6 +613,7 @@
                             <p class="text-secondary small">
                                 Membentuk siswa berwawasan luas, mandiri, dan memiliki semangat belajar yang tinggi.
                             </p>
+                             <a href="https://ppdb.smk17muncar.sch.id/" class="btn btn-primary ">Lihat Unit</a>
                         </div>
                     </div>
                 </div>
@@ -570,6 +627,7 @@
                             <p class="text-secondary small">
                                 Membentuk siswa berwawasan luas, mandiri, dan memiliki semangat belajar yang tinggi.
                             </p>
+                             <a href="https://ppdb.smk17muncar.sch.id/" class="btn btn-primary">Lihat Unit</a>
                         </div>
                     </div>
                 </div>
@@ -584,6 +642,7 @@
                             <p class="text-secondary small">
                                 Menyiapkan generasi muda menuju perguruan tinggi dan dunia kerja dengan kompetensi unggul.
                             </p>
+                            <a href="https://ppdb.smk17muncar.sch.id/" class="btn btn-primary">Lihat Unit</a>
                         </div>
                     </div>
                 </div>

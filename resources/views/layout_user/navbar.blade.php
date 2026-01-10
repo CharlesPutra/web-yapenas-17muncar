@@ -26,15 +26,18 @@
         body {
             background-color: #f8f9fa;
             font-family: 'Poppins', sans-serif;
+            padding-top: 130px;
+            /* sesuaikan tinggi navbar kamu */
         }
 
         /* === NAVBAR DASAR === */
         .navbar {
-            position: relative;
+            position: sticky;
+            top: 0;
             background-color: #ffffff;
-            /* isi navbar putih */
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            z-index: 10;
+            z-index: 1050;
+            /* di atas konten & dropdown */
         }
 
 
@@ -244,6 +247,12 @@
                 height: 80px;
             }
         }
+
+        @media (max-width: 768px) {
+            body {
+                padding-top: 110px;
+            }
+        }
     </style>
 </head>
 
@@ -293,7 +302,7 @@
                             <li class="dropdown-submenu">
                                 <a class="dropdown-item dropdown-toggle">SMK</a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">SMK 17 AGUSTUS 1945 MUNCAR</a></li>
+                                    <li><a class="dropdown-item" href="https://ppdb.smk17muncar.sch.id/">SMK 17 AGUSTUS 1945 MUNCAR</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -320,7 +329,8 @@
 
                 <!-- Ikon Sosial Media -->
                 <div class="social-icons d-flex align-items-center justify-content-center">
-                    <a href="https://www.youtube.com/@official.yapenasbwi/videos" target="_blank" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                    <a href="https://www.youtube.com/@official.yapenasbwi/videos" target="_blank"
+                        aria-label="YouTube"><i class="bi bi-youtube"></i></a>
                     <a href="#" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
                     <a href="#" target="_blank" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
                     <a href="#" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
