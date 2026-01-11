@@ -26,7 +26,7 @@
         body {
             background-color: #f8f9fa;
             font-family: 'Poppins', sans-serif;
-            padding-top: 130px;
+            /* padding-top: 130px; */
             /* sesuaikan tinggi navbar kamu */
         }
 
